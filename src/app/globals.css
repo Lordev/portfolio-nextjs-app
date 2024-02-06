@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+       @apply text-normal
+    }
+
+    p {
+        @apply text-base
+    }
+
+    h1 {
+        @apply text-3xl;
+    }
+    h2 {
+        @apply text-xl;
+        margin-bottom: 2rem
+    }
+
+    .header {
+        position: relative;
+        color: #fff;
+    }
+
+    .header::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -.5rem;
+        width: 4px;
+        height: 120%;
+        background-color: lightgray;
+        animation: typeWriter 1s infinite;
+    }
+
+    @keyframes typeWriter {
+        0%, 50% {
+            opacity: 0; /* At the beginning and halfway through, be fully transparent */
+        }
+        100% {
+            opacity: .6; /* At the end, be fully opaque */
+        }
+    }
+}
