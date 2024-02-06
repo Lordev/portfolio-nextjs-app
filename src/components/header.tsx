@@ -21,27 +21,31 @@ export default function Header() {
         contact: "Contact",
     };
 
-    console.log(homeNav.about);
+    const navRender = () => {
+        const links = [];
+        for (const key in homeNav) {
+            links.push(
+                <Link key={key} className="link" href={`#${key}`}>
+                    {homeNav[key]}
+                </Link>
+            );
+        }
+        return links;
+    };
 
     return (
         <div className="w-full fixed text-white z-10">
             <nav
-                className={`container relative flex flex-wrap items-center justify-between mx-auto py-3 px-20   m-5 transition-all duration-500 ${
+                className={`container relative flex flex-wrap items-center justify-between mx-auto py-3 px-20 m-5 transition-all duration-500 border-1 rounded-full ${
                     scrolled
-                        ? "bg-black opacity-50 blur-1 border-2 border-stone-300 rounded-full"
-                        : "transparant border-2 border-transparent rounded-full"
+                        ? "bg-black/50 blur-1 border-black/10 "
+                        : "border-transparent rounded-full"
                 }`}
             >
                 <Link href="/" className="font-bond text-normal">
                     Home
                 </Link>
-                <div className="space-x-10 text-base">
-                    <Link href="#about">About</Link>
-                    <Link href="#projects">Projects</Link>
-                    <Link href="#skills">Skills</Link>
-                    <Link href="#experience">Experience</Link>
-                    <Link href="#contact">Contact</Link>
-                </div>
+                <div className="space-x-10 text-base">{navRender()}</div>
             </nav>
         </div>
     );
