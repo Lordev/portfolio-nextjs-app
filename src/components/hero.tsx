@@ -1,5 +1,5 @@
 "use client";
-import BgVideo from "@/components/BgVideo";
+import BgVideo from "@/components/bgVideo";
 import Title from "@/components/title";
 import { useRef, useContext, useState, useEffect } from "react";
 import { ScrollContext } from "@/utils/ScrollObserver";
@@ -22,7 +22,7 @@ export default function Hero() {
 
     return (
         <div
-            className="min-h-screen flex flex-col items-center justify-center sticky top-0 -z-10"
+            className="min-h-screen flex flex-col items-center justify-center sticky top-0 -z-10 bg-fixed"
             ref={refContainer}
             style={{ transform: `translateY(-${progress * 10}vh)` }}
         >

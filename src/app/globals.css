@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-       @apply text-normal
+       @apply text-normal;
     }
 
     p {
@@ -27,6 +27,7 @@
         position: relative;
         color: #fff;
     }
+
 
     .header::after {
         content: "";
@@ -75,6 +76,65 @@
     .icon:hover {
         color: #fff;
         /* background-color: #fff; */
+    }
+
+    .background-about {
+        right: 0;
+        position: absolute;
+        background-image: url(../../public/home.jpg);
+        width: 50%;
+        height: 100%;
+        opacity: 20%;
+        filter: brightness(.6);
+    }
+
+
+    .button-next,
+    .button-prev {
+        position: absolute;
+        bottom: 50%;
+        font-size: 5rem;
+        color: gray;
+        opacity: .1;
+        z-index: 5;
+    }
+
+    .button-next:hover,
+    .button-prev:hover {
+        opacity: 1;
+    }
+
+    .button-next {
+        right: 0
+    }
+
+    .button-prev {
+        left: 0;
+    }
+
+
+    .slide-container {
+        flex: none;
+    }
+    
+    .slide {
+        transition: transform ease 1s;
+    }
+
+    .carousel-wrapper {
+        display: flex;
+        overflow: hidden;
+        gap: 50px;
+    }
+
+    .carousel {
+        position: relative;
+        padding: 0 2rem;
+    }
+
+    .slide-text {
+        transition: transform ease .7s;
+
     }
 
 }

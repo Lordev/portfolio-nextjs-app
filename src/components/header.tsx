@@ -34,7 +34,7 @@ export default function Header() {
     };
 
     return (
-        <div className="w-full fixed text-white z-10">
+        <div className="w-full fixed text-white z-50">
             <nav
                 className={`container relative flex flex-wrap items-center justify-between mx-auto py-3 px-20 m-5 transition-all duration-500 border-1 rounded-full ${
                     scrolled

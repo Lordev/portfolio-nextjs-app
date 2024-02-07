@@ -8,7 +8,6 @@ interface IconsProps {
 
 export default function Icons({ icon: Icon, color }: IconsProps) {
     const [isHovered, setIsHovered] = useState(false);
-    console.log(color);
     const handleMouseEnter = () => {
         setIsHovered(true);
     };
@@ -25,7 +24,7 @@ export default function Icons({ icon: Icon, color }: IconsProps) {
         >
             <Icon
                 size={50}
-                className="transition-colors duration-200 cursor-pointer"
+                className="transition-colors duration-200 cursor-pointer opacity-45"
                 style={{ color: isHovered ? color : "gray" }}
             />
         </div>
