@@ -1,4 +1,5 @@
-import ProjectsSlider from "./projectsSlider";
+import DynamicScrollLine from "./DynamicScrollLine";
+import ProjectsSlider from "./ProjectsSlider";
 
 const images = [
     "https://placehold.co/1000.jpg",
@@ -12,11 +13,14 @@ const images = [
 
 export default function Projects() {
     return (
-        <div className="h-screen grid grid-cols-2 items-center bg-gray-800 relative">
+        <div
+            id="projects"
+            className="h-screen grid grid-cols-2 items-center bg-gray-800 relative"
+        >
             <ProjectsSlider images={images} />
             <div className="mx-auto pl-40">
                 <div className="flex flex-col gap-5">
-                    <h1 className="text-white text-10xl">Projects</h1>
+                    <h1 className="text-white">Projects</h1>
                     <div>
                         <h2 className="text-primary3">
                             {" "}
@@ -51,7 +55,6 @@ export default function Projects() {
                     </div>
                 </div>
             </div>
-            <div className="absolute bg-gradient-to-b from-transparent via-slate-500 to-transparent w-1 -bottom-[20rem] h-[40rem] right-2/4"></div>
         </div>
     );
 }

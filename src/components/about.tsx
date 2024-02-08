@@ -1,6 +1,7 @@
 import { LiaGithubAlt } from "react-icons/lia";
 import { ImLinkedin } from "react-icons/im";
 import Icons from "./Icons";
+import DynamicScrollLine from "./DynamicScrollLine";
 
 export default function About() {
     return (
@@ -11,11 +12,11 @@ export default function About() {
             <div className="flex flex-row items-center gap-20 h-full">
                 <div className="flex flex-row gap-10 flex-initial mx-auto w-3/4">
                     <div className="flex flex-col justify-center gap-5">
-                        <Icons icon={LiaGithubAlt} color="white"></Icons>
-                        <Icons icon={ImLinkedin} color="white"></Icons>
+                        <Icons size={50} icon={LiaGithubAlt} color="white"></Icons>
+                        <Icons size={50} icon={ImLinkedin} color="white"></Icons>
                     </div>
                     <div>
-                        <h1 className="text-white text-10xl">About</h1>
+                        <h1 className="text-white">About</h1>
                         <div>
                             <h2 className="text-primary3">Lorem ipsum dolor sit amet </h2>
                             <h3 className="text-primary4">
@@ -46,7 +47,7 @@ export default function About() {
                 </div>
                 <div className="background-about w-2/4"></div>
             </div>
-            <div className="absolute bg-gradient-to-b from-transparent via-slate-500 to-transparent w-1 -bottom-[20rem] h-[40rem] right-2/4 z-10"></div>
+            <DynamicScrollLine />
         </div>
     );
 }

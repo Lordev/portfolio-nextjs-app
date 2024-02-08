@@ -1,4 +1,3 @@
-import classNames from "classnames";
 import { useState } from "react";
 
 type Images = {
@@ -22,7 +21,6 @@ export default function ProjectsSlider({ images }: Images) {
         });
     };
 
-    console.log(images);
     return (
         <div className="carousel">
             <div className="carousel-wrapper">
@@ -33,6 +31,7 @@ export default function ProjectsSlider({ images }: Images) {
                         className={`slide-container ${
                             index === curIndex ? "active" : ""
                         }`}
+                        onClick={handleNext}
                     >
                         <div
                             className="slide"
@@ -47,10 +46,10 @@ export default function ProjectsSlider({ images }: Images) {
                             <p className="text-white text-xl">
                                 TEST TEST TEST TEST TEST TEST
                             </p>
-                            <p className="text-white text-xl">
+
+                            <p className="text-white text-base">
                                 TEST TEST TEST TEST TEST TEST
                             </p>
-                            <button type="button"> </button>
                         </div>
                     </div>
                 ))}

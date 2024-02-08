@@ -1,14 +1,14 @@
 "use client";
-import BgVideo from "@/components/bgVideo";
-import Title from "@/components/title";
-import { useRef, useContext, useState, useEffect } from "react";
-import { ScrollContext } from "@/utils/ScrollObserver";
+import BgVideo from "@/components/BgVideo";
+import Title from "@/components/Title";
+import { useRef, useState, useEffect } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import UseScrollContext from "@/hooks/useScrollContext";
 
 export default function Hero() {
     const [loaded, setLoaded] = useState(false);
     const refContainer = useRef<HTMLDivElement>(null);
-    const { scrollY } = useContext(ScrollContext);
+    const { scrollY } = UseScrollContext();
 
     let progress = 0;
     const { current: elContainer } = refContainer;

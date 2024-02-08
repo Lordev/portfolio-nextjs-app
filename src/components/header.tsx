@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link";
-import { ScrollContext } from "@/utils/ScrollObserver";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import UseScrollContext from "@/hooks/useScrollContext";
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
-    const { scrollY } = useContext(ScrollContext);
+    const { scrollY } = UseScrollContext();
 
     useEffect(() => {
         const viewportHeight = window.innerHeight;

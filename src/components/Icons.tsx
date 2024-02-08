@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import { useState } from "react";
 // Import your CSS file where you define hover effect styles
 
 interface IconsProps {
-    icon: any; // Assuming the icon type is any for now
+    icon: any;
     color: string;
+    size: number;
 }
 
-export default function Icons({ icon: Icon, color }: IconsProps) {
+export default function Icons({ icon: Icon, color, size }: IconsProps) {
     const [isHovered, setIsHovered] = useState(false);
     const handleMouseEnter = () => {
         setIsHovered(true);
@@ -23,8 +24,8 @@ export default function Icons({ icon: Icon, color }: IconsProps) {
             onMouseLeave={handleMouseLeave}
         >
             <Icon
-                size={50}
-                className="transition-colors duration-200 cursor-pointer opacity-45"
+                size={size}
+                className="transition-colors duration-200 cursor-pointer opacity-45 animate-bouncy"
                 style={{ color: isHovered ? color : "gray" }}
             />
         </div>
