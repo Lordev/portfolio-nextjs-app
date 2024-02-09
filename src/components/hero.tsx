@@ -22,7 +22,7 @@ export default function Hero() {
 
     return (
         <div
-            className="min-h-screen flex flex-col items-center justify-center sticky top-0 -z-10 bg-fixed"
+            className="min-h-screen flex flex-col items-center justify-center sticky top-0 -z-50 bg-fixed"
             ref={refContainer}
             style={{ transform: `translateY(-${progress * 10}vh)` }}
         >

@@ -5,7 +5,7 @@ type Images = {
 };
 
 export default function ProjectsSlider({ images }: Images) {
-    const [curIndex, setCurIndex] = useState<number>(0);
+    const [curIndex, setCurIndex] = useState<number>(3);
 
     const handlePrevious = () => {
         setCurIndex((prevIndex: number) => {

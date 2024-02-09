@@ -19,7 +19,7 @@ export default function Icons({ icon: Icon, color, size }: IconsProps) {
 
     return (
         <div
-            className={`icon-container ${isHovered ? "hovered" : ""}`}
+            className={`icon-container  ${isHovered ? "hovered" : ""}`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >

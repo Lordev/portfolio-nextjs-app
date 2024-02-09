@@ -1,9 +1,9 @@
 import { LiaGithubAlt } from "react-icons/lia";
 import { ImLinkedin } from "react-icons/im";
-import Icons from "./Icons";
-import DynamicScrollLine from "./DynamicScrollLine";
+import Icons from "@/components/Icons";
+import DynamicScrollLine from "@/components/DynamicScrollLine";
 
-export default function About() {
+export default function AboutSection() {
     return (
         <div
             className="h-screen grid grid-cols-2 items-center py-16 bg-gray-800 relative"

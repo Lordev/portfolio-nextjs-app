@@ -1,26 +1,17 @@
-import DynamicScrollLine from "./DynamicScrollLine";
-import ProjectsSlider from "./ProjectsSlider";
+import Input from "@/components/Input";
 
-const images = [
-    "https://placehold.co/1000.jpg",
-    "https://placehold.co/1001.jpg",
-    "https://placehold.co/1002.jpg",
-    "https://placehold.co/1003.jpg",
-    "https://placehold.co/1004.jpg",
-    "https://placehold.co/1005.jpg",
-    "https://placehold.co/1006.jpg",
-];
-
-export default function Projects() {
+export default function ContactSection() {
     return (
         <div
-            id="projects"
-            className="h-screen grid grid-cols-2 items-center bg-gray-800 relative"
+            className="h-screen grid-cols-2 items-center py-16 bg-gray-800 grid"
+            id="contact"
         >
-            <ProjectsSlider images={images} />
-            <div className="mx-auto pl-40">
+            <div
+                className="mx-auto pl-40 
+            y-16"
+            >
                 <div className="flex flex-col gap-5">
-                    <h1 className="text-white">Projects</h1>
+                    <h1 className="text-white">Contact</h1>
                     <div>
                         <h2 className="text-primary3">
                             {" "}
@@ -54,6 +45,17 @@ export default function Projects() {
                         </p>
                     </div>
                 </div>
+            </div>
+            <div className="flex flex-col gap-2 w-2/4 text-center mx-auto border-gray-600 border p-16">
+                <form>
+                    ``
+                    <fieldset className="flex flex-col gap-10 text-white *:flex *:justify-between">
+                        <Input id="fname" title="Name" type="text" />
+                        <Input id="email" title="E-mail" type="email" />
+                        <Input id="telephone" title="Telephone" type="number" />
+                        <Input id="message-box" title="Message" isTextarea={true} />
+                    </fieldset>
+                </form>
             </div>
         </div>
     );
