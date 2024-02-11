@@ -1,36 +1,31 @@
 import ProjectsSlider from "@/components/Slider";
 
 const images = [
-    "https://placehold.co/1000.jpg",
-    "https://placehold.co/1001.jpg",
-    "https://placehold.co/1002.jpg",
-    "https://placehold.co/1003.jpg",
-    "https://placehold.co/1004.jpg",
-    "https://placehold.co/1005.jpg",
-    "https://placehold.co/1006.jpg",
+    "https://placehold.co/700x500.jpg",
+    "https://placehold.co/700x500.jpg",
+    "https://placehold.co/700x500.jpg",
+    "https://placehold.co/700x500.jpg",
+    "https://placehold.co/700x500.jpg",
+    "https://placehold.co/700x500.jpg",
+    "https://placehold.co/700x500.jpg",
+    "https://placehold.co/700x500.jpg",
+    "https://placehold.co/700x500.jpg",
+    "https://placehold.co/700x500.jpg",
 ];
 
 export default function ProjectsSection() {
     return (
-        <div
-            id="projects"
-            className="h-screen grid grid-cols-2 items-center bg-gray-800 relative"
-        >
-            <ProjectsSlider images={images} />
-            <div className="mx-auto pl-40">
+        <section id="project" className="section-projects">
+            <div className="col-start-3 pl-5">
                 <div className="flex flex-col gap-5">
-                    <h1 className="text-white">Projects</h1>
+                    <h1>Projects</h1>
+                    <hr className="custom-divider" />
+
                     <div>
-                        <h2 className="text-primary3">
-                            {" "}
-                            Lorem ipsum dolor sit amet consectetur adipisicing.
-                        </h2>
-                        <h3 className="text-primary4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing.
-                        </h3>
+                        <h2> Lorem ipsum dolor sit amet.</h2>
                     </div>
                     <div className="w-3/4">
-                        <p className="text-stone-300">
+                        <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Exercitationem omnis praesentium nostrum reiciendis assumenda,
                             enim dolore perspiciatis nam magni laudantium veniam,
@@ -40,20 +35,13 @@ export default function ProjectsSection() {
                             sapiente quam cupiditate minus ex. Nihil atque est mollitia
                             laudantium qui deserunt, eos quod. Natus, ex ducimus?
                         </p>
-                        <br />
-                        <p className="text-stone-300">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Quaerat quam nesciunt voluptates maxime vitae? Laudantium
-                            harum laboriosam nihil assumenda alias, vitae numquam laborum
-                            earum perferendis atque illo rem tempora necessitatibus. Quas
-                            inventore voluptas provident eos enim eum doloremque
-                            accusantium maiores ullam odit. Quasi voluptas minus maxime
-                            iusto accusantium soluta! Magnam recusandae dicta eveniet modi
-                            alias voluptate sequi facere perspiciatis in.
-                        </p>
                     </div>
                 </div>
             </div>
-        </div>
+            <div className="col-start-4">
+                <ProjectsSlider images={images} />
+                <ProjectsSlider images={images} />
+            </div>
+        </section>
     );
 }

@@ -17,7 +17,6 @@ export default function Header() {
         about: "About",
         projects: "Project",
         skills: "Skills",
-        experience: "Experience",
         contact: "Contact",
     };
 
@@ -42,7 +41,7 @@ export default function Header() {
                         : "border-transparent rounded-full"
                 }`}
             >
-                <Link href="/" className="font-bond text-normal">
+                <Link href="#hero" className="font-bond text-normal">
                     Home
                 </Link>
                 <div className="space-x-10 text-base">{navRender()}</div>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { IconType } from "react-icons";
 // Import your CSS file where you define hover effect styles
 
 interface IconsProps {

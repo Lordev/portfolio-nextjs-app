@@ -1,3 +1,7 @@
+:root {
+    --slide-with: 500px
+}
+
 .link {
     position: relative;
 }
@@ -25,6 +29,13 @@
     width: 100%;
 }
 
+
+.custom-divider {
+    width: 8rem;
+    border-top: solid 3px #8D6602;
+    margin-bottom: 2rem;
+}
+
 .icon:hover {
     color: #fff;
     /* background-color: #fff; */
@@ -32,21 +43,24 @@
 
 .slide-container {
     flex: none;
+    width: var(--slide-with);
+    height: 500px;
 }
 
 .slide {
     transition: transform ease 1s;
+    width: 100%;
 }
 
 .carousel-wrapper {
     display: flex;
     overflow: hidden;
-    gap: 50px;
+    width: 1000px
 }
 
 .carousel {
     position: relative;
-    padding: 0 2rem;
+    width: var(--slide-with)
 }
 
 .button-next,
@@ -88,7 +102,8 @@
     width: 120px;
     height: 120px;
     position: relative;
-    clip-path: inset(0 0% 0 0);
+    /* clip-path: inset(0 0% 0 0); */
+    opacity: .8;
     /* Adjust the clippin  path as needed */
     transition: clip-path 1s ease;
 }
@@ -104,11 +119,8 @@
 }
 
 .progress-circle .progress-circle__text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: white;
+    font-size: rem;
     transition: all 1.2s ease;
 }
 

@@ -2,27 +2,17 @@ import Input from "@/components/Input";
 
 export default function ContactSection() {
     return (
-        <div
-            className="h-screen grid-cols-2 items-center py-16 bg-gray-800 grid"
-            id="contact"
-        >
-            <div
-                className="mx-auto pl-40 
-            y-16"
-            >
+        <div className="section-contact" id="contact">
+            <div className="col-start-3">
                 <div className="flex flex-col gap-5">
-                    <h1 className="text-white">Contact</h1>
+                    <h1>Contact</h1>
+                    <hr className="custom-divider" />
+
                     <div>
-                        <h2 className="text-primary3">
-                            {" "}
-                            Lorem ipsum dolor sit amet consectetur adipisicing.
-                        </h2>
-                        <h3 className="text-primary4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing.
-                        </h3>
+                        <h2> Lorem ipsum dolor sit amet.</h2>{" "}
                     </div>
                     <div className="w-3/4">
-                        <p className="text-stone-300">
+                        <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Exercitationem omnis praesentium nostrum reiciendis assumenda,
                             enim dolore perspiciatis nam magni laudantium veniam,
@@ -32,25 +22,14 @@ export default function ContactSection() {
                             sapiente quam cupiditate minus ex. Nihil atque est mollitia
                             laudantium qui deserunt, eos quod. Natus, ex ducimus?
                         </p>
-                        <br />
-                        <p className="text-stone-300">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Quaerat quam nesciunt voluptates maxime vitae? Laudantium
-                            harum laboriosam nihil assumenda alias, vitae numquam laborum
-                            earum perferendis atque illo rem tempora necessitatibus. Quas
-                            inventore voluptas provident eos enim eum doloremque
-                            accusantium maiores ullam odit. Quasi voluptas minus maxime
-                            iusto accusantium soluta! Magnam recusandae dicta eveniet modi
-                            alias voluptate sequi facere perspiciatis in.
-                        </p>
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col gap-2 w-2/4 text-center mx-auto border-gray-600 border p-16">
+            <div className="flex flex-col gap-2 text-center p-16 col">
                 <form>
-                    ``
-                    <fieldset className="flex flex-col gap-10 text-white *:flex *:justify-between">
-                        <Input id="fname" title="Name" type="text" />
+                    <fieldset className="flex flex-col gap-8 text-white/70 text-[1.3rem] *:flex *:justify-between">
+                        <Input id="fname" title="First name" type="text" />
+                        <Input id="lname" title="Last name" type="text" />
                         <Input id="email" title="E-mail" type="email" />
                         <Input id="telephone" title="Telephone" type="number" />
                         <Input id="message-box" title="Message" isTextarea={true} />

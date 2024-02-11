@@ -1,9 +1,11 @@
-import { InputHTMLAttributes } from "react";
+import InputComponent from "./InputComponent";
+import TextAreaComponent from "./TextAreaComponent";
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement | HTMLTextAreaElement> {
+interface InputProps {
     title: string;
     id: string;
     isTextarea?: boolean;
+    type?: string;
     styles?: {
         wrapper?: string;
         label?: string;
@@ -16,18 +18,15 @@ export default function Input({
     isTextarea = false,
     title,
     id,
+    type,
     styles = {},
-    ...rest
 }: InputProps) {
     const {
-        label = "mb-8",
+        label = "mb-1 text-[1.2rem]",
         wrapper = "flex flex-col items-start",
-        input = "border-b-2 border-gray-200/20 rounded-lg p-2 w-full",
+        input = "border-b-2 border-gray-200/20 rounded-lg w-full focus:border-sky-600",
         textarea = "w-full",
     } = styles;
-
-    const InputComponent = isTextarea ? "textarea" : "input";
-    const componentProps = isTextarea ? {} : { type: rest.type }; // Fixed here
 
     return (
         <div className={wrapper}>
@@ -36,12 +35,11 @@ export default function Input({
                     {title}
                 </label>
             )}
-            <InputComponent
-                id={id}
-                className={isTextarea ? textarea : input}
-                {...rest}
-                {...componentProps}
-            />
+            {isTextarea ? (
+                <TextAreaComponent id={id} className={textarea} />
+            ) : (
+                <InputComponent id={id} className={input} type={type} />
+            )}
         </div>
     );
 }

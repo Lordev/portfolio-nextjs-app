@@ -1,14 +1,40 @@
+.wrapper {
+    overflow: hidden;
+}
+
+.section-about,
+.section-projects,
+.section-contact,
+.section-skills {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    background-color: var(--background);
+}
+
+.section-about,
+.section-projects,
+.section-contact {
+    grid-template-columns: [outer-left] 1fr minmax(auto, 50rem) [main] repeat(2, 30%) [outer-right] 1fr minmax(auto, 50rem);
+}
+
+.section-skills {
+    margin: 0 auto;
+    position: relative;
+    grid-template-columns: [outer-left] 1fr minmax(auto, 50rem) [main] 60% [outer-right] 1fr minmax(auto, 50rem);
+}
 
 .background-about {
-    right: 0;
     position: absolute;
     background-image: url(../../public/home.jpg);
     width: 50%;
     height: 100%;
-    opacity: 20%;
+    opacity: 5%;
+    left: 0;
     filter: brightness(0.6);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-
 
 
 .background-skills {
@@ -32,6 +58,7 @@
     color: #fff;
     font-size: 4.6rem;
 }
+
 
 .header::after {
     content: "";

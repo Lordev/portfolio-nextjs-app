@@ -9,21 +9,21 @@ export default function ProjectsSlider({ images }: Images) {
 
     const handlePrevious = () => {
         setCurIndex((prevIndex: number) => {
-            const newIndex = prevIndex === 0 ? images.length - 1 : --prevIndex;
+            const newIndex = prevIndex === 0 ? images.length - 2 : --prevIndex;
             return newIndex;
         });
     };
 
     const handleNext = () => {
         setCurIndex((prevIndex: number) => {
-            const newIndex = prevIndex === images.length - 1 ? 0 : ++prevIndex;
+            const newIndex = prevIndex === images.length - 2 ? 0 : ++prevIndex;
             return newIndex;
         });
     };
 
     return (
         <div className="carousel">
-            <div className="carousel-wrapper">
+            <div className={`carousel-wrapper w-[${images.le}]`}>
                 {/* //TODO remove index as key */}
                 {images.map((image, index) => (
                     <div
@@ -40,15 +40,14 @@ export default function ProjectsSlider({ images }: Images) {
                             <img src={image} alt={`Slide ${index + 1}`} />
                         </div>
                         <div
-                            className="slide-text"
+                            className="slide-text mt-2.5"
                             style={{ transform: `translateX(-${100 * curIndex}%)` }}
                         >
-                            <p className="text-white text-xl">
-                                TEST TEST TEST TEST TEST TEST
-                            </p>
+                            <h4>Project {++index}</h4>
 
-                            <p className="text-white text-base">
-                                TEST TEST TEST TEST TEST TEST
+                            <p className="text-white/50 text-base">
+                                I made this project to showcase my skills in combining my
+                                front-end skills with some backend techniques
                             </p>
                         </div>
                     </div>

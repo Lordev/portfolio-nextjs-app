@@ -22,9 +22,10 @@ export default function Hero() {
 
     return (
         <div
+            id="Hero"
             className="min-h-screen flex flex-col items-center justify-center sticky top-0 -z-50 bg-fixed"
             ref={refContainer}
-            style={{ transform: `translateY(-${progress * 10}vh)` }}
+            style={{ transform: `translateY(-${progress * 15}vh)` }}
         >
             <BgVideo
                 className="absolute brightness-50 object-cover w-full h-full -z-10"

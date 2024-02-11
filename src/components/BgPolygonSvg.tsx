@@ -164,9 +164,9 @@ const BgPolygonSvg = (props: SVGProps<SVGSVGElement>) => (
         </g>
         <defs>
             <radialGradient id="gradient">
-                <stop offset={0.1} stopColor="#fff" />
-                <stop offset={0.2} stopColor="#F59E0B" />
-                <stop offset={1} stopColor="rgba(23, 53, 179, 0)" />
+                <stop offset={0} stopColor="#fff" />
+                <stop offset={0.0} stopColor="#F59E0B" />
+                <stop offset={0.5} stopColor="rgba(23, 53, 179, 0)" />
             </radialGradient>
             <mask id="a">
                 <path fill="#fff" d="M0 0h1440v1080H0z" />

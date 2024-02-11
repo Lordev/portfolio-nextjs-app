@@ -1,91 +1,51 @@
 import { useRef } from "react";
-import Icons from "../../components/Icons";
-import SkillsBar from "../../components/ProgressBar";
-import { RiJavascriptFill } from "react-icons/ri";
+import BgPolygonSvg from "../../components/BgPolygonSvg";
+import ProgressBar from "@/components/ProgressBar";
 import { FaReact, FaHtml5, FaCss3, FaSass, FaFigma } from "react-icons/fa";
+import { RiJavascriptFill } from "react-icons/ri";
 import {
     TbBrandNextjs,
     TbBrandTailwind,
     TbBrandVscode,
     TbBrandTypescript,
 } from "react-icons/tb";
-import BgPolygonSvg from "../../components/BgPolygonSvg";
 
 export default function SkillsSection() {
     const refcontainer = useRef<HTMLDivElement>(null);
-
     const { current: elContainer } = refcontainer;
     if (elContainer) {
     }
 
     return (
-        <div
-            className="h-screen grid auto-rows-fr items-center py-16 bg-gray-800 relative bg-grid"
-            id="skills"
-        >
+        <div className="section-skills" id="skills">
             <BgPolygonSvg fill="red" stroke="10px" className="background-skills" />
-            <div className="flex flex-col gap-2 w-2/4 text-center mx-auto">
-                <h1 className="text-white">Skills</h1>
+            <div className="flex flex-col gap-5 w-2/4 text-center mx-auto mb-8 col-start-3">
+                <h1>Skills</h1>
+                <hr className="custom-divider mx-auto" />
+
                 <div>
-                    <h2 className="text-primary3">Lorem ipsum dolor sit amet </h2>
-                    <h3 className="text-primary4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum illum
-                        sapiente facilis aliquid ea saepe.
-                    </h3>
+                    <h2>Lorem ipsum dolor sit amet </h2>
                 </div>
-                <div className="text-stone-300 w-2/4 mx-auto">
+                <div className="text-center flex justify-center">
                     <p>
                         {`Welcome to my front-end showcase! Here, I proudly present a
                             selection of my latest projects, each crafted with a blend of
                             creativity and technical finesse. Through these endeavors, I
                             strive to create engaging and immersive user experiences that
-                            captivate and delight. `}
+                            captivate and delight. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium repellat alias temporibus delectus vel voluptas dignissimos deserunt! Expedita libero nam, quaerat ratione pariatur ad fugit explicabo. Quos repellendus nam culpa?`}
                     </p>
                 </div>
             </div>
-            <div className="flex-row shadow-md flex gap-x-10 gap-y-5 mx-auto flex-wrap w-3/4  justify-center border border-stone-500/20 rounded-full p-10 bg-white/[1%]">
-                <div className="flex items-center gap-5">
-                    <Icons size={100} icon={FaHtml5} color="white" />
-                    <SkillsBar progress={90} />
-                </div>
-                <div className="flex items-center gap-5">
-                    <Icons size={100} icon={FaCss3} color="white" />
-                    <SkillsBar progress={85} />
-                </div>
-                <div className="flex items-center gap-5">
-                    <Icons size={100} icon={RiJavascriptFill} color="white" />
-                    <SkillsBar progress={90} />
-                </div>
-                <div className="flex items-center gap-5">
-                    <Icons size={100} icon={FaReact} color="white" />
-                    <SkillsBar progress={85} />
-                </div>
-                <div className="flex items-center gap-5">
-                    <Icons size={100} icon={TbBrandTypescript} color="white" />
-                    <SkillsBar progress={90} />
-                </div>
-                <div className="flex items-center gap-5">
-                    <Icons size={100} icon={TbBrandNextjs} color="white" />
-                    <SkillsBar progress={80} />
-                </div>
-
-                <div className="flex items-center gap-5">
-                    <Icons size={100} icon={FaSass} color="white" />
-                    <SkillsBar progress={80} />
-                </div>
-                <div className="flex items-center gap-5">
-                    <Icons size={100} icon={TbBrandTailwind} color="white" />
-                    <SkillsBar progress={90} />
-                </div>
-
-                <div className="flex items-center gap-5">
-                    <Icons size={100} icon={FaFigma} color="white" />
-                    <SkillsBar progress={80} />
-                </div>
-                <div className="flex items-center gap-5">
-                    <Icons size={100} icon={TbBrandVscode} color="white" />
-                    <SkillsBar progress={90} />
-                </div>
+            <div className="flex-row shadow-md flex gap-x-10 gap-y-5  flex-wrap justify-center border border-stone-500/20 rounded-md p-10 bg-white/[1%] col-start-3 *:flex items-center gap-5">
+                <ProgressBar progress={95} icon={FaHtml5} title="HTML" />
+                <ProgressBar progress={95} icon={FaReact} title="React" />
+                <ProgressBar progress={95} icon={FaCss3} title="CSS" />
+                <ProgressBar progress={95} icon={FaSass} title="Sass" />
+                <ProgressBar progress={95} icon={FaFigma} title="Figma" />
+                <ProgressBar progress={95} icon={TbBrandNextjs} title="NextJS" />
+                <ProgressBar progress={95} icon={TbBrandTailwind} title="TailWind" />
+                <ProgressBar progress={95} icon={TbBrandVscode} title="VScode" />
+                <ProgressBar progress={95} icon={TbBrandTypescript} title="TypeScript" />
             </div>
         </div>
     );
