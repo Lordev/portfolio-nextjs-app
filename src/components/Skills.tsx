@@ -1,12 +1,5 @@
 import ProgressBar from "./ProgressBar";
-import { FaReact, FaHtml5, FaCss3, FaSass, FaFigma } from "react-icons/fa";
-import { RiJavascriptFill } from "react-icons/ri";
-import {
-    TbBrandNextjs,
-    TbBrandTailwind,
-    TbBrandVscode,
-    TbBrandTypescript,
-} from "react-icons/tb";
+
 
 import Icons from "@/components/Icons";
 
@@ -31,7 +24,7 @@ export default function Skills() {
             </div>
             <div>
                 <Icons size={70} icon={TbBrandTypescript} color="white" />
-                <ProgressBar progress={90} />
+            <ProgressBar progress={90} />
             </div>
             <div>
                 <Icons size={70} icon={TbBrandNextjs} color="white" />

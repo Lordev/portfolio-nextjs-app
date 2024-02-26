@@ -20,7 +20,7 @@ export default function DynamicScrollLine({ parentRef }: DynamicScrollLineProps)
             const y = rect.top + rect.height;
             const distanceFromTop = Math.abs(scrollY - y);
 
-            const upValue = Math.min(distanceFromTop / window.innerHeight, 0.8);
+            const upValue = Math.min(distanceFromTop / window.innerHeight, 0.5);
             setGradientValue(upValue);
         }, [scrollY]);
     }

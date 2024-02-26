@@ -15,6 +15,9 @@ export default function Hero() {
     if (elContainer) {
         progress = Math.min(1, scrollY / elContainer.clientHeight);
     }
+    if (scrollY === elContainer?.clientHeight) {
+        progress = elContainer.clientHeight;
+    }
 
     useEffect(() => {
         setLoaded(true);
@@ -23,7 +26,7 @@ export default function Hero() {
     return (
         <div
             id="Hero"
-            className="min-h-screen flex flex-col items-center justify-center sticky top-0 -z-50 bg-fixed"
+            className="min-h-screen flex flex-col items-center justify-center sticky top-0 z-20 bg-fixed"
             ref={refContainer}
             style={{ transform: `translateY(-${progress * 15}vh)` }}
         >

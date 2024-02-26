@@ -7,3 +7,4 @@ interface TextAreaComponentProps extends HtmlHTMLAttributes<HTMLTextAreaElement>
 export default function TextAreaComponent({ id, ...rest }: TextAreaComponentProps) {
     return <textarea id={id} rows={5} {...rest} />;
 }
+    

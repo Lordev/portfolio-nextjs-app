@@ -1,5 +1,8 @@
+@import "../styles/variables.css";
+
 .wrapper {
     overflow: hidden;
+    background-color: var(--background);
 }
 
 .section-about,
@@ -10,6 +13,8 @@
     display: grid;
     align-items: center;
     background-color: var(--background);
+    position: relative;
+    z-index: 20;
 }
 
 .section-about,
@@ -19,19 +24,14 @@
 }
 
 .section-skills {
-    margin: 0 auto;
-    position: relative;
     grid-template-columns: [outer-left] 1fr minmax(auto, 50rem) [main] 60% [outer-right] 1fr minmax(auto, 50rem);
 }
 
 .background-about {
-    position: absolute;
-    background-image: url(../../public/home.jpg);
-    width: 50%;
+    background-image: url(../../public/about-img.jpg);
     height: 100%;
-    opacity: 5%;
-    left: 0;
-    filter: brightness(0.6);
+    opacity: 30%;
+    filter: brightness(0.7);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -82,3 +82,9 @@
     }
 }
 
+
+#tsparticles {
+    width: 50rem;
+    height: 100%;
+    z-index: 50;
+}

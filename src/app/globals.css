@@ -1,19 +1,18 @@
 @import "../styles/components.css";
 @import "../styles/pages.css";
+@import "../styles/variables.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
-:root {
-    --background: #1f2937;
-}
 
 @layer base {
     html {
         scroll-behavior: smooth
     }
+    
     body {
         @apply text-normal text-stone-300;
     }
@@ -31,11 +30,11 @@
     }
 
     h2 {
-        @apply text-xl text-primary1/80; 
+        @apply text-normal text-white font-extralight uppercase; 
     }
 
     h3 {
-        @apply text-normal text-gray-500;
+        @apply text-xl text-white/90 font-medium;
     }
     h4 {
         @apply text-normal text-gray-100;

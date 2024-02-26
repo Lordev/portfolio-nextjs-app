@@ -1,6 +1,4 @@
-:root {
-    --slide-with: 500px
-}
+@import "../styles/variables.css";
 
 .link {
     position: relative;
@@ -44,18 +42,18 @@
 .slide-container {
     flex: none;
     width: var(--slide-with);
-    height: 500px;
+    height: 1000px;
 }
 
 .slide {
     transition: transform ease 1s;
-    width: 100%;
+    height: 90%;
 }
 
 .carousel-wrapper {
     display: flex;
     overflow: hidden;
-    width: 1000px
+    width: var(--slide-with)
 }
 
 .carousel {
@@ -67,15 +65,11 @@
 .button-prev {
     position: absolute;
     bottom: 50%;
-    font-size: 2rem;
-    color: white;
-    opacity: 0.1;
+    font-size: 4rem;
+    color: var(--primary2);
+    opacity: .5;
     z-index: 5;
-    background-color: gray;
     border-radius: 50%;
-    height: 5rem;
-    width: 5rem;
-    margin: auto;
 }
 
 .button-next:hover,
@@ -84,11 +78,11 @@
 }
 
 .button-next {
-    right: 0;
+    right: 1rem;
 }
 
 .button-prev {
-    left: 0;
+    left: 1rem;
 }
 
 .slide-text {
@@ -152,4 +146,16 @@
     100% {
         transform: translateX(0);
     }
+}
+
+
+.highlight {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background: radial-gradient(circle, gray 0%, rgba(0,0,0,0) 50%);
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+    transform: translate(-50%, -50%);
+    opacity: .2;
 }

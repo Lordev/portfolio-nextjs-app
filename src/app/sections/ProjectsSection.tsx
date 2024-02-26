@@ -1,45 +1,57 @@
 import ProjectsSlider from "@/components/Slider";
+import SectionTitle from "@/components/sectionTitle";
+import { useMousePositionContext } from "@/hooks/useMousePositionContext";
 
 const images = [
-    "https://placehold.co/700x500.jpg",
-    "https://placehold.co/700x500.jpg",
-    "https://placehold.co/700x500.jpg",
-    "https://placehold.co/700x500.jpg",
-    "https://placehold.co/700x500.jpg",
-    "https://placehold.co/700x500.jpg",
-    "https://placehold.co/700x500.jpg",
-    "https://placehold.co/700x500.jpg",
-    "https://placehold.co/700x500.jpg",
-    "https://placehold.co/700x500.jpg",
+    "https://placehold.co/800x1000.jpg",
+    "https://placehold.co/800x1000.jpg",
+    "https://placehold.co/800x1000.jpg",
+    "https://placehold.co/800x1000.jpg",
+    "https://placehold.co/800x1000.jpg",
+    "https://placehold.co/800x1000.jpg",
+    "https://placehold.co/800x1000.jpg",
+    "https://placehold.co/800x1000.jpg",
+    "https://placehold.co/800x1000.jpg",
+    "https://placehold.co/800x1000.jpg",
 ];
 
 export default function ProjectsSection() {
-    return (
-        <section id="project" className="section-projects">
-            <div className="col-start-3 pl-5">
-                <div className="flex flex-col gap-5">
-                    <h1>Projects</h1>
-                    <hr className="custom-divider" />
+    const { containerRef, elX, elY } = useMousePositionContext();
 
-                    <div>
-                        <h2> Lorem ipsum dolor sit amet.</h2>
-                    </div>
-                    <div className="w-3/4">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Exercitationem omnis praesentium nostrum reiciendis assumenda,
-                            enim dolore perspiciatis nam magni laudantium veniam,
-                            accusamus officiis sapiente doloribus! Perferendis sint esse
-                            quod consequatur! Iste, officiis ipsa dignissimos, praesentium
-                            blanditiis mollitia, saepe ea impedit sit deleniti numquam
-                            sapiente quam cupiditate minus ex. Nihil atque est mollitia
-                            laudantium qui deserunt, eos quod. Natus, ex ducimus?
-                        </p>
+    return (
+        <section
+            id="projects"
+            className="section-projects border-t-[.5px] border-white/20 z-20"
+        >
+            <div className="relative col-start-3 overflow-hidden" ref={containerRef}>
+                <div className="highlight" style={{ left: elX, top: elY }}></div>
+                <div className="flex flex-col gap-10 border-r-transparent border-white/10 p-16 border-2 bg-white/[2%] opacity-90">
+                    <div className="flex flex-row gap-8 ">
+                        <div className="flex flex-col gap-5">
+                            <SectionTitle title="Projects" />
+                            <div>
+                                <h3>This is my collection</h3>
+                            </div>
+                            <div>
+                                <p className="">
+                                    Welcome to my front-end showcase! Here, I proudly
+                                    present a selection of my latest projects, each
+                                    crafted with a blend of creativity and technical
+                                    finesse. Through these endeavors,{" "}
+                                    <span>
+                                        I strive to create engaging and immersive user
+                                        experiences that captivate and delight.
+                                    </span>{" "}
+                                    From dynamic animations to responsive layouts, each
+                                    project reflects my commitment to pushing the
+                                    boundaries of {`what's`} possible in web design.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div className="col-start-4">
-                <ProjectsSlider images={images} />
                 <ProjectsSlider images={images} />
             </div>
         </section>

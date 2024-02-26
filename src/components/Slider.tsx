@@ -23,7 +23,7 @@ export default function ProjectsSlider({ images }: Images) {
 
     return (
         <div className="carousel">
-            <div className={`carousel-wrapper w-[${images.le}]`}>
+            <div className={`carousel-wrapper w-[${images.length}]`}>
                 {/* //TODO remove index as key */}
                 {images.map((image, index) => (
                     <div

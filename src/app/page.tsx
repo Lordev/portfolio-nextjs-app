@@ -9,13 +9,15 @@ import ContactSection from "./sections/ContactSection";
 export default function Home() {
     return (
         <div>
-            <HeroSection />
-            <div className="wrapper">
-                <AboutSection />
-                <ProjectsSection />
-                <SkillsSection />
-                <ContactSection />
+            <div>
+                <HeroSection />
+                <div className="wrapper">
+                    s <AboutSection />
+                    <ProjectsSection />
+                </div>
             </div>
+            <SkillsSection />
+            <ContactSection />
         </div>
     );
 }
