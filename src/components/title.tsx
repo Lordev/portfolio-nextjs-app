@@ -21,11 +21,7 @@ export default function Title({ title }: titleProps) {
 
     return (
         <>
-            <h1 className="header">
-                {currentTitle.substring(0, 4)}
-                <span className="text-amber-500">{currentTitle.substring(4, 14)}</span>
-                {currentTitle.substring(14)}
-            </h1>
+            <h2 className="header text-color-accent">{currentTitle}</h2>
         </>
     );
 }

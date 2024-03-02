@@ -1,0 +1,65 @@
+@import "../styles/components.scss";
+@import "../styles/glitch.scss";
+@import "../styles/pages.scss";
+@import "../styles/variables.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+    html {
+        scroll-behavior: smooth
+    }
+
+    body {
+        @apply text-normal text-stone-300 bg-color-primary;
+    }
+    
+    p {
+        @apply text-base text-color-secondary/70 font-sans ; 
+        
+        span {
+            @apply text-white
+        }
+    }
+
+    
+
+    h1 {
+        @apply text-3xl text-color-secondary tracking-widest uppercase font-extrabold; 
+    }
+
+    h2 {
+        @apply text-[1.2rem] text-color-secondary font-normal uppercase; 
+    }
+
+    h3 {
+        @apply text-lg text-white/70 font-extrabold tracking-tighter uppercase;
+        
+        span {
+            @apply text-color-accent
+        }
+}
+
+    h4 {
+        @apply text-base text-gray-300 uppercase tracking-widest font-bold;
+    }
+
+    .subtitle {
+        @apply text-base text-gray-500;
+
+    }
+
+    input {
+        @apply bg-transparent px-0 py-1 border-b-2 placeholder:text-base border-gray-50/5 active:border-none focus:outline-none focus:border-transparent font-[inter]
+    }
+
+    textarea {
+        @apply bg-white/[5%] border-white placeholder:text-base
+    }
+
+    
+}

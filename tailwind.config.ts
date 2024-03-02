@@ -10,6 +10,7 @@ const config: Config = {
         extend: {
             fontSize: {
                 base: "62.5%",
+                small: ["1.4rem", "1.6rem"],
                 normal: ["1.6rem", "1.8rem"],
                 lg: ["2rem", "2.8rem"],
                 xl: ["2.4rem", "3.2rem"],
@@ -24,18 +25,35 @@ const config: Config = {
                 "10xl": ["8rem", "9rem"],
             },
             backgroundImage: {
-                "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-                "gradient-conic":
-                    "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+                "radial-accent":
+                    "linear-gradient(-45deg, var(--primary), var(--accent), var(--accent2), var(--secondary))",
                 "about-section": "url('/public/jpg.jpeg')",
             },
             colors: {
-                primary: "#F59E0B",
-                primary1: "#D18C08",
-                primary2: "#AF7905",
-                primary3: "#8D6602",
-                primary4: "#6B5300",
-                primary5: "#493000",
+                "color-primary": "#0a0d11",
+                "color-secondary": "#f5f5f5",
+                "color-accent": "#2bbbad",
+                "color-accent-2": "#ea580c",
+            },
+            dropShadow: {
+                doubler: "-1px 1px 0px var(--accent2)",
+                "doubler-inverse": "-1px 1px 0px var(--accent)",
+            },
+
+            keyframes: {
+                gradient: {
+                    "0%": { backgroundPosition: "0% 50%" },
+                    "50%": { backgroundPosition: "100% 50%" },
+                    "100%": { backgroundPosition: "0% 50%" },
+                },
+            },
+
+            backgroundSize: {
+                "400%": "400% 400%",
+            },
+
+            animation: {
+                gradient: "gradient 15s ease infinite",
             },
         },
     },

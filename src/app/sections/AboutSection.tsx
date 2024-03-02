@@ -8,16 +8,16 @@ export default function AboutSection() {
     const { containerRef, elX, elY } = useMousePositionContext();
 
     return (
-        <section className="section-about" id="about">
+        <section className="section-about bg-color-primary " id="about">
             <div className="background-about col-start-1 col-span-3"></div>
-            <div className="relative overflow-hidden" ref={containerRef}>
+            <div className="relative overflow-hidden bg-white/[2%]" ref={containerRef}>
                 <div className="highlight" style={{ left: elX, top: elY }}></div>
-                <div className="flex flex-col gap-10 border-l-transparent border-white/10 p-16 border-2 bg-white/[2%] opacity-90">
+                <div className="flex flex-col gap-10 border-l-transparent border-white/10 p-16 border-2 opacity-90 rounded-md">
                     <div className="flex flex-row gap-8 ">
                         <div className="flex flex-col gap-5">
                             <SectionTitle title="About" />
                             <div>
-                                <h3>Hello {`I'm`} Lorenzo</h3>
+                                <h3>Code Storyteller</h3>
                             </div>
                             <div>
                                 <p className="">

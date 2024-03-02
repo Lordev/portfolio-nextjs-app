@@ -10,20 +10,20 @@ interface ProgressBarProps {
 
 export default function ProgressBar({ progress, icon, title }: ProgressBarProps) {
     const [offset, setOffset] = useState(0);
-    const [timer, setTimer] = useState(false);
+    const [timer, setTimer] = useState(true);
 
-    useEffect(() => {
-        const progressOffset = ((100 - progress) / 100) * 339.292;
-        setOffset(progressOffset);
+    // useEffect(() => {
+    //     const progressOffset = ((100 - progress) / 100) * 339.292;
+    //     setOffset(progressOffset);
 
-        const delayAnimation = (time: number): void => {
-            setTimeout(() => {
-                setTimer(true);
-            }, time);
-        };
+    //     const delayAnimation = (time: number): void => {
+    //         setTimeout(() => {
+    //             setTimer(true);
+    //         }, time);
+    //     };
 
-        delayAnimation(0);
-    }, [progress]);
+    //     delayAnimation(0);
+    // }, [progress]);
 
     return (
         <div className="flex flex-row items-center gap-2 relative">
@@ -40,16 +40,16 @@ export default function ProgressBar({ progress, icon, title }: ProgressBarProps)
                     <defs>
                         {/* Define the linear gradient */}
                         <linearGradient id="grad" x1="0%" y1="20%" x2="40%" y2="90%">
-                            <stop offset="0%" stopColor="#f59e0b" />
-                            <stop offset="20%" stopColor="#D18C08" />
-                            <stop offset="40%" stopColor="#8D6602" />
-                            <stop offset="60%" stopColor="#6B5300" />
-                            <stop offset="80%" stopColor="#593000" />
+                            <stop offset="0%" stopColor="#333" />
+                            <stop offset="20%" stopColor="#333" />
+                            <stop offset="40%" stopColor="#333" />
+                            <stop offset="60%" stopColor="#333" />
+                            <stop offset="80%" stopColor="#333" />
                         </linearGradient>
                     </defs>
                     <circle
                         className="progress-ring__circle"
-                        strokeWidth="10"
+                        strokeWidth="8"
                         fill="transparent"
                         stroke="url(#grad)"
                         r="54"

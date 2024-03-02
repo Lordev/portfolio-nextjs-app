@@ -28,18 +28,18 @@ export default function Hero() {
             id="Hero"
             className="min-h-screen flex flex-col items-center justify-center sticky top-0 z-20 bg-fixed"
             ref={refContainer}
-            style={{ transform: `translateY(-${progress * 15}vh)` }}
+            style={{ transform: `translateY(-${progress * 20}vh)` }}
         >
-            <BgVideo
-                className="absolute brightness-50 object-cover w-full h-full -z-10"
-                videoSrc="/video.mp4"
-                videoType="video/mp4"
-                playsInline
-            />
-            <div className="flex-1 flex items-center justify-center flex-col">
-                <Title title="Web Developer | Lorenzo Sallons" />
+            <h1 className="mb-8">Hi {`I'm`} Lorenzo</h1>
+            <div style={{ transform: `translateY(-${progress * 5}vh)` }}>
+                <Title title="website developer" />
             </div>
+            <h4
+                className="absolute bottom-48"
+                style={{ transform: `translateY(-${progress * 5}vh)` }}
+            ></h4>
             <div
+                style={{ transform: `translateY(-${progress * 0}vh)` }}
                 className={`absolute bottom-5 transition-all duration-1000 ${
                     loaded ? "opacity-100" : "opacity-0 -translate-y-10"
                 }`}

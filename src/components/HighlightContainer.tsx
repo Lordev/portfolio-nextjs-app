@@ -12,7 +12,7 @@ export default function HighlightContainer({ children }: HighlightContainerProps
     console.log(elX, elY);
     return (
         <div className="container-highlight" ref={containerRef}>
-            <div className="highlight" style={{ left: elX, top: elY }}></div>
+
             {children}
         </div>
     );

@@ -24,7 +24,7 @@ export default function Input({
     const {
         label = "mb-1 text-[1.2rem]",
         wrapper = "flex flex-col items-start",
-        input = "border-b-2 border-gray-200/20 rounded-lg w-full focus:border-sky-600",
+        input = "border-b-2 border-gray-200/20 rounded-lg w-full focus:border-color-accent",
         textarea = "w-full",
     } = styles;
 

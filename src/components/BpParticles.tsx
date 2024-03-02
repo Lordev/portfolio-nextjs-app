@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadFull } from "tsparticles";
+import { loadSlim } from "@tsparticles/slim";
 import { type Container, type ISourceOptions } from "@tsparticles/engine";
 
 export default function BgParticles({}) {
@@ -14,7 +14,7 @@ export default function BgParticles({}) {
             // starting from v2 you can add only the features you need reducing the bundle size
             //await loadAll(engine);
             //await loadFull(engine);
-            await loadFull(engine);
+            await loadSlim(engine);
             //await loadBasic(engine);
         }).then(() => {
             setInit(true);
@@ -30,13 +30,9 @@ export default function BgParticles({}) {
             background: {
                 color: "#0a0d11",
             },
-            fpsLimit: 60,
+            fpsLimit: 15,
             interactivity: {
                 events: {
-                    onClick: {
-                        enable: true,
-                        mode: "repulse",
-                    },
                     onHover: {
                         enable: true,
                         mode: "bubble",
@@ -49,10 +45,6 @@ export default function BgParticles({}) {
                         opacity: 0,
                         size: 2,
                         speed: 3,
-                    },
-                    repulse: {
-                        distance: 400,
-                        duration: 0.4,
                     },
                 },
             },
@@ -69,7 +61,7 @@ export default function BgParticles({}) {
                     density: {
                         enable: true,
                     },
-                    value: 300,
+                    value: 50,
                 },
                 opacity: {
                     animation: {

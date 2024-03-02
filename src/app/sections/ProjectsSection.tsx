@@ -21,16 +21,16 @@ export default function ProjectsSection() {
     return (
         <section
             id="projects"
-            className="section-projects border-t-[.5px] border-white/20 z-20"
+            className="section-projects bg-color-primary border-t-[1px] border-white/20"
         >
             <div className="relative col-start-3 overflow-hidden" ref={containerRef}>
                 <div className="highlight" style={{ left: elX, top: elY }}></div>
-                <div className="flex flex-col gap-10 border-r-transparent border-white/10 p-16 border-2 bg-white/[2%] opacity-90">
+                <div className="flex flex-col gap-10 border-r-transparent border-white/10 p-16 border-2 bg-white/[1%] opacity-90 rounded-md">
                     <div className="flex flex-row gap-8 ">
                         <div className="flex flex-col gap-5">
                             <SectionTitle title="Projects" />
                             <div>
-                                <h3>This is my collection</h3>
+                                <h3>My collection</h3>
                             </div>
                             <div>
                                 <p className="">
