@@ -8,17 +8,12 @@
 }
 
 .glitch-text:hover {
-    color: var(--accent3);
     animation: glitch-skew 1s infinite linear alternate-reverse;
 }
 
 .glitch {
     display: inline-block;
     position: relative;
-    color: var(--secondary);
-    font-weight: 500;
-    letter-spacing: 0.5em;
-    text-transform: uppercase;
 }
 
 @keyframes glitch-skew {

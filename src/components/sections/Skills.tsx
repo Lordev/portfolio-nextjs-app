@@ -1,15 +1,9 @@
-import ProgressBar from "@/components/ProgressBar";
-import { FaReact, FaHtml5, FaCss3, FaSass, FaFigma } from "react-icons/fa";
+
 import SectionTitle from "@/components/sectionTitle";
-import {
-    TbBrandNextjs,
-    TbBrandTailwind,
-    TbBrandVscode,
-    TbBrandTypescript,
-} from "react-icons/tb";
+
 import { useMousePositionContext } from "@/hooks/useMousePositionContext";
 
-export default function SkillsSection() {
+export default function Skills() {
     const { containerRef, elX, elY } = useMousePositionContext();
 
     return (
@@ -42,21 +36,7 @@ export default function SkillsSection() {
                         </div>
                     </div>
                 </div>
-                <div className="flex-row shadow-md flex gap-x-10 gap-y-5  flex-wrap justify-center  rounded-md p-10 col-start-3 *:flex items-center gap-5 backdrop-blur-[2px]">
-                    <ProgressBar progress={98} icon={FaHtml5} title="HTML" />
-                    <ProgressBar progress={90} icon={FaReact} title="React" />
-                    <ProgressBar progress={95} icon={FaCss3} title="CSS" />
-                    <ProgressBar progress={93} icon={FaSass} title="Sass" />
-                    <ProgressBar progress={84} icon={FaFigma} title="Figma" />
-                    <ProgressBar progress={88} icon={TbBrandNextjs} title="NextJS" />
-                    <ProgressBar progress={87} icon={TbBrandTailwind} title="TailWind" />
-                    <ProgressBar progress={91} icon={TbBrandVscode} title="VScode" />
-                    <ProgressBar
-                        progress={88}
-                        icon={TbBrandTypescript}
-                        title="TypeScript"
-                    />
-                </div>
+             
             </section>
         </>
     );

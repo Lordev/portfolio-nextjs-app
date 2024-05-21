@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { IconType } from "react-icons";
-// Import your CSS file where you define hover effect styles
 
 interface IconsProps {
     icon: any;
@@ -17,7 +16,7 @@ export default function Icons({ icon: Icon, color, size }: IconsProps) {
     const handleMouseLeave = () => {
         setIsHovered(false);
     };
-
+ 
     return (
         <div
             className={`icon-container  ${isHovered ? "hovered" : ""}`}
@@ -26,8 +25,10 @@ export default function Icons({ icon: Icon, color, size }: IconsProps) {
         >
             <Icon
                 size={size}
-                className="transition-colors duration-200 cursor-pointer opacity-45 animate-bouncy"
-                style={{ color: isHovered ? color : "gray" }}
+                className={`transition-colors duration-200 cursor-pointer animate-bouncy ${
+                    !isHovered && "text-zinc-500"
+                }`}
+                style={{ color: isHovered && color }}
             />
         </div>
     );

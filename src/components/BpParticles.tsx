@@ -28,7 +28,7 @@ export default function BgParticles({}) {
     const options: ISourceOptions = useMemo(
         () => ({
             background: {
-                color: "#0a0d11",
+                color: "#3c3c3c",
             },
             fpsLimit: 15,
             interactivity: {
@@ -49,7 +49,7 @@ export default function BgParticles({}) {
                 },
             },
             particles: {
-                color: { value: "#ffffff" },
+                color: { value: "#fff" },
                 move: {
                     direction: "none",
                     enable: true,
@@ -74,7 +74,7 @@ export default function BgParticles({}) {
                     type: "circle",
                 },
                 size: {
-                    value: 1,
+                    value: 2,
                 },
             },
         }),

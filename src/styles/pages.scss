@@ -18,19 +18,8 @@ footer {
 }
 
 
-.section-about,
-.section-projects,
-.section-contact,
-.section-skills {
-    height: 100vh;
-}
 
-.section-about,
-.section-projects,
-.section-contact
-{
-    grid-template-columns: [outer-left] 1fr minmax(auto, 50rem) [main] repeat(2, 30%) [outer-right] 1fr minmax(auto, 50rem);
-}
+
 
 .section-skills,
 footer {
@@ -60,12 +49,6 @@ footer {
 
 .background-skills path {
     fill: url(#gradient);
-}
-
-
-.header {
-    text-align: center;
-    margin: 0 auto;
 }
 
 

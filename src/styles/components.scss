@@ -151,8 +151,8 @@
     width: 800px;
     height: 800px;
     border-radius: 50%;
-    background: radial-gradient(circle, gray 0%, rgba(0,0,0,0) 50%);
-    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+    background: radial-gradient(circle, var(--accent) 0%, rgba(0,0,0,0) 50%);
+    transition: transform 1.4s ease-out, opacity 0.2s ease-out;
     transform: translate(-50%, -50%);
     opacity: .2;
 }

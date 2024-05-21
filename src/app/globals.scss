@@ -15,42 +15,34 @@
     }
 
     body {
-        @apply text-normal text-stone-300 bg-color-primary;
+        @apply text-base bg-primary text-primary;
     }
     
     p {
-        @apply text-base text-color-secondary/70 font-sans ; 
-        
-        span {
-            @apply text-white
-        }
+        @apply text-base font-inter font-extralight; 
+
     }
 
     
-
     h1 {
-        @apply text-3xl text-color-secondary tracking-widest uppercase font-extrabold; 
+        @apply text-3xl  tracking-widest uppercase font-jetBrains font-medium; 
     }
 
     h2 {
-        @apply text-[1.2rem] text-color-secondary font-normal uppercase; 
+        @apply text-[1.2rem] font-medium font-jetBrains; 
     }
 
     h3 {
-        @apply text-lg text-white/70 font-extrabold tracking-tighter uppercase;
-        
-        span {
-            @apply text-color-accent
-        }
-}
+        @apply text-lg font-bold tracking-tighter uppercase;
+    }        
+
 
     h4 {
-        @apply text-base text-gray-300 uppercase tracking-widest font-bold;
+        @apply text-base uppercase tracking-widest font-bold;
     }
 
-    .subtitle {
-        @apply text-base text-gray-500;
-
+    h5 {
+        @apply text-sm font-jetBrains font-normal uppercase;
     }
 
     input {
@@ -60,6 +52,4 @@
     textarea {
         @apply bg-white/[5%] border-white placeholder:text-base
     }
-
-    
 }

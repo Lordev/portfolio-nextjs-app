@@ -1,25 +1,25 @@
 "use client";
-import HeroSection from "@/components/Hero";
-import AboutSection from "./sections/AboutSection";
-import ProjectsSection from "./sections/ProjectsSection";
-import SkillsSection from "./sections/SkillsSection";
-import ContactSection from "./sections/ContactSection";
+import Hero from "@/components/sections/Hero";
+import About from "../components/sections/About";
+import Projects from "../components/sections/Projects";
+import Skills from "../components/sections/Skills";
+import Contact from "../components/sections/Contact";
 import BgParticles from "@/components/BpParticles";
-import Footer from "./sections/Footer";
+import Footer from "../components/sections/Footer";
 
 export default function Home() {
     return (
         <div>
             <div>
-                <HeroSection />
+                <Hero />
                 <div className="wrapper">
-                    <AboutSection />
+                    <About />
                 </div>
             </div>
             <BgParticles />
-            <ProjectsSection />
-            <SkillsSection />
-            <ContactSection />
+            <Projects />
+            {/* <Skills /> */}
+            <Contact />
             <Footer />
         </div>
     );

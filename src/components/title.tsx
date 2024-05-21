@@ -13,7 +13,7 @@ export default function Title({ title }: titleProps) {
             const timeout = setTimeout(() => {
                 setTitle((prevText) => prevText + title[currentIndex]);
                 setCurrentindex((prevIndex) => prevIndex + 1);
-            }, 120);
+            }, 20);
 
             return () => clearTimeout(timeout);
         }
@@ -21,7 +21,7 @@ export default function Title({ title }: titleProps) {
 
     return (
         <>
-            <h2 className="header text-color-accent">{currentTitle}</h2>
+            <p>{currentTitle}</p>
         </>
     );
 }
