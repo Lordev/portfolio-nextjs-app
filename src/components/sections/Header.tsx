@@ -31,7 +31,7 @@ export default function Header() {
                 <Link
                     data-text={property}
                     key={property}
-                    className="glitch glitch-text text-secondary font-bold font-inter text-md transition-all duration-500 hover:text-accent uppercase"
+                    className="glitch glitch-text  font-bold font-inter text-md transition-transform duration-500 hover:text-accent uppercase"
                     href={`#${property}`}
                 >
                     {homeNav[property]}
@@ -42,10 +42,12 @@ export default function Header() {
     };
 
     return (
-        <div className="w-full fixed z-50">
+        <div className="w-full fixed z-50 ">
             <nav
                 className={`relative grid grid-cols-[1fr_auto_1fr] items-center py-1 transition-all duration-500 border-1 px-16 h-full ${
-                    scrolled ? "bg-secondary blur-1 border-black/10" : "bg-primary"
+                    scrolled
+                        ? "bg-secondary text-primary border-black/10"
+                        : "bg-secondary text-primary"
                 }`}
             >
                 <LogoCompany className="text-zinc-400 w-20 h-20 animate-spin" />

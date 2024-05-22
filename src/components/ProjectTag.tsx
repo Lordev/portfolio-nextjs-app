@@ -3,5 +3,5 @@ interface ProjectTagProps {
 }
 
 export default function ProjectTag({ label }: ProjectTagProps) {
-    return <div className="py-2 px-3 bg-zinc-500/20 rounded-full">{label}</div>;
+    return <div className="py-2 px-3 bg-zinc-400 text-primary rounded-full">{label}</div>;
 }

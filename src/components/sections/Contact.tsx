@@ -7,7 +7,7 @@ export default function Contact() {
 
     return (
         <section
-            className="relative bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-300/5 from-2% to-black py-80"
+            className="relative bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black/20 from-% to-black/40 py-20"
             id="contact"
         >
             <div className="max-w-screen-md mx-auto space-y-20">
@@ -50,7 +50,7 @@ export default function Contact() {
                             <Input id="telephone" title="Telephone" type="number" />
                             <Input id="message-box" title="Message" isTextarea={true} />
                             <button
-                                className="group border border-primary p-6 w-fit uppercase font-extrabold tracking-wider transition-all mx-auto duration-200 animate-gradient bg-radial-accent ease-in bg-400% grayscale-[80%] hover:grayscale-0"
+                                className="group border border-primary p-6 w-fit uppercase font-extrabold tracking-wider transition-all mx-auto duration-200 animate-gradient bg-radial-accent ease-in bg-400% "
                                 type="submit"
                             >
                                 <span className="text-primary relative drop-shadow-doubler-inverse group-hover:drop-shadow-doubler-inverse group-hover:text-primary text-[1.2rem]">

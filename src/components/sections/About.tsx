@@ -2,25 +2,16 @@ import { LiaGithubAlt } from "react-icons/lia";
 import { ImLinkedin } from "react-icons/im";
 import Icons from "@/components/Icons";
 import SectionTitle from "@/components/sectionTitle";
-import { useMousePositionContext } from "@/hooks/useMousePositionContext";
-
 import SkillIconsList from "../SkillIcons/SkillIconsList";
 
 export default function About() {
-    const { containerRef, elX, elY } = useMousePositionContext();
-
     return (
         <section
-            className="z-20 relative grid  border-t-4 border-accent bg-primary pt-20 pb-20"
+            className="z-30 relative grid bg-primary pt-20 pb-60 text-secondary border-t-4 border-accent [clipPath:_polygon(0_0,100%_0%,100%_100%,0_80%)]"
             id="about"
         >
             <div className="space-y-8 grid grid-cols-2 container mx-auto">
-                <SkillIconsList />
-                <div
-                    className="relative overflow-hidden text-secondary "
-                    ref={containerRef}
-                >
-                    <div className="highlight" style={{ left: elX, top: elY }}></div>
+                <div className="relative overflow-hidden">
                     <div className="flex flex-col gap-10 opacity-90 rounded-xl max-w-[520px]">
                         <div className="flex flex-row gap-8 ">
                             <div className="flex flex-col gap-5">
@@ -59,6 +50,7 @@ export default function About() {
                         </div>
                     </div>
                 </div>
+                <SkillIconsList />
             </div>
             {/* <DynamicScrollLine parentRef={parentRef} /> */}
         </section>

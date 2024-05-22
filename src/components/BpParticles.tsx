@@ -28,7 +28,7 @@ export default function BgParticles({}) {
     const options: ISourceOptions = useMemo(
         () => ({
             background: {
-                color: "#3c3c3c",
+                color: "#2F4858",
             },
             fpsLimit: 15,
             interactivity: {

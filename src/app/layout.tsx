@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import Header from "@/components/sections/Header";
 import "./globals.scss";
 import ScrollObserver from "@/utils/ScrollObserver";
+import SideBar from "@/components/SideBar";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
                     `}
                 >
                     <Header />
+                    {/* <SideBar /> */}
                     {children}
                 </body>
             </html>

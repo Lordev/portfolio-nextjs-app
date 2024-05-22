@@ -9,7 +9,7 @@ import Footer from "../components/sections/Footer";
 
 export default function Home() {
     return (
-        <div>
+        <main className="overflow-hidden">
             <div>
                 <Hero />
                 <div className="wrapper">
@@ -21,6 +21,6 @@ export default function Home() {
             {/* <Skills /> */}
             <Contact />
             <Footer />
-        </div>
+        </main>
     );
 }

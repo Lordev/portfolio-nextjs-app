@@ -5,26 +5,6 @@
     background-color: var(--background);
 }
 
-.section-about,
-.section-projects,
-.section-contact,
-.section-skills,
-footer {
-    z-index: 20;
-    position: relative;
-    display: grid;
-    align-items: center;
-
-}
-
-
-
-
-
-.section-skills,
-footer {
-    grid-template-columns: [outer-left] 1fr minmax(auto, 50rem) [main] 60% [outer-right] 1fr minmax(auto, 50rem);
-}
 
 .background-about {
     background-image: url(../../public/about-img.jpg);
