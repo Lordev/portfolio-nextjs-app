@@ -32,6 +32,8 @@ const config: Config = {
                 "radial-accent":
                     "linear-gradient(-45deg, var(--primary), var(--accent), var(--accent-secondary), var(--secondary))",
                 "about-section": "url('/public/jpg.jpeg')",
+                "hover-gradient":
+                    "radial-gradient(circle, var(--accent) 0%, rgba(0,0,0,0) 50%)",
             },
             colors: {
                 primary: "var(--primary)",
@@ -50,6 +52,30 @@ const config: Config = {
                     "50%": { backgroundPosition: "100% 50%" },
                     "100%": { backgroundPosition: "0% 50%" },
                 },
+                wobble: {
+                    "0%": {
+                        transform: "translateX(0)",
+                    },
+                    "20%": {
+                        transform: " translateX(-5px) rotate(-2deg)",
+                    },
+
+                    "40%": {
+                        transform: " translateX(5px) rotate(2deg)",
+                    },
+
+                    "60%": {
+                        transform: "translateX(-5px) rotate(-2deg)",
+                    },
+
+                    "80%": {
+                        transform: "translateX(5px) rotate(2deg)",
+                    },
+
+                    "100%": {
+                        transform: "translateX(0)",
+                    },
+                },
             },
 
             backgroundSize: {
@@ -58,6 +84,7 @@ const config: Config = {
 
             animation: {
                 gradient: "gradient 15s ease infinite",
+                bouncy: "wobble 0.5s ease-in-out;",
             },
         },
     },

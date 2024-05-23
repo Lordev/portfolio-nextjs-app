@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 
 export default function SideBar() {
@@ -15,7 +16,7 @@ export default function SideBar() {
                 <Link
                     data-text={property}
                     key={property}
-                    className="glitch glitch-text text-accent font-bold font-inter text-md transition-all duration-500  uppercase"
+                    className="glitch glitch-text text-primary font-bold font-inter text-md transition-all duration-500 hover:text-accent uppercase"
                     href={`#${property}`}
                 >
                     {homeNav[property]}
@@ -26,8 +27,8 @@ export default function SideBar() {
     };
 
     return (
-        <div className="fixed left-0 h-screen bg-primary shadow-xl z-40 px-12 transform-all duration-300 ease-in-out">
-            <div className="space-y-10 flex-col flex  justify-center h-full ">
+        <div className="fixed left-0 h-screen bg-transparent z-20 px-8   top-0 bottom-0">
+            <div className="space-y-10 text-base flex-col flex  justify-center h-full ">
                 {navRender()}
             </div>
         </div>

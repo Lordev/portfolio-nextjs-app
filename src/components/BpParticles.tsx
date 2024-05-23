@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
@@ -21,9 +23,7 @@ export default function BgParticles({}) {
         });
     }, []);
 
-    const particlesLoaded = async (container?: Container): Promise<void> => {
-        console.log(container);
-    };
+    const particlesLoaded = async (container?: Container): Promise<void> => {};
 
     const options: ISourceOptions = useMemo(
         () => ({

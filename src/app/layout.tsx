@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
-import Header from "@/components/sections/Header";
-import "./globals.scss";
-import ScrollObserver from "@/utils/ScrollObserver";
+import Header from "@/components/Header";
 import SideBar from "@/components/SideBar";
+import "./globals.scss";
 
 const inter = Inter({
     subsets: ["latin"],
-    weight: ["300"],
+    weight: ["300", "600"],
     variable: "--font-inter",
 });
 const JetBrains = JetBrains_Mono({
@@ -27,20 +26,18 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <ScrollObserver>
-            <html lang="en">
-                <body
-                    className={`
+        <html lang="en">
+            <body
+                className={`
                     ${inter.variable} 
                     ${JetBrains.variable} 
                     font-jetBrains
                     `}
-                >
-                    <Header />
-                    {/* <SideBar /> */}
-                    {children}
-                </body>
-            </html>
-        </ScrollObserver>
+            >
+                <Header />
+                {/* <SideBar /> */}
+                {children}
+            </body>
+        </html>
     );
 }

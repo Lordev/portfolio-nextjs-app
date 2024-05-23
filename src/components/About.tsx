@@ -1,8 +1,9 @@
 import { LiaGithubAlt } from "react-icons/lia";
 import { ImLinkedin } from "react-icons/im";
-import Icons from "@/components/Icons";
-import SectionTitle from "@/components/sectionTitle";
-import SkillIconsList from "../SkillIcons/SkillIconsList";
+import Icons from "@/components/SocialIcon";
+import SectionTitle from "@/components/SectionTitle";
+import SkillIconsList from "./SkillIcons";
+import SkillIcons from "./SkillIcons";
 
 export default function About() {
     return (
@@ -37,20 +38,12 @@ export default function About() {
                             </div>
                         </div>
                         <div className="flex flex-row gap-4">
-                            <Icons
-                                size={40}
-                                icon={LiaGithubAlt}
-                                color="var(--accent)"
-                            ></Icons>
-                            <Icons
-                                size={40}
-                                icon={ImLinkedin}
-                                color="var(--accent)"
-                            ></Icons>
+                            <Icons size={40} icon={LiaGithubAlt}></Icons>
+                            <Icons size={40} icon={ImLinkedin}></Icons>
                         </div>
                     </div>
                 </div>
-                <SkillIconsList />
+                <SkillIcons />
             </div>
             {/* <DynamicScrollLine parentRef={parentRef} /> */}
         </section>

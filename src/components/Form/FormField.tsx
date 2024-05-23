@@ -1,5 +1,5 @@
-import InputComponent from "./InputComponent";
-import TextAreaComponent from "./TextAreaComponent";
+import Input from "./Input";
+import TextArea from "./TextArea";
 
 interface InputProps {
     title: string;
@@ -14,7 +14,7 @@ interface InputProps {
     };
 }
 
-export default function Input({
+export default function FormField({
     isTextarea = false,
     title,
     id,
@@ -36,9 +36,9 @@ export default function Input({
                 </label>
             )}
             {isTextarea ? (
-                <TextAreaComponent id={id} className={textarea} />
+                <TextArea id={id} className={textarea} />
             ) : (
-                <InputComponent id={id} className={input} type={type} />
+                <Input id={id} className={input} type={type} />
             )}
         </div>
     );

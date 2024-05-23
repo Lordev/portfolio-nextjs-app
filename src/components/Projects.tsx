@@ -1,5 +1,5 @@
-import ProjectPostList from "../ProjectPosts/ProjectPostList";
-import ProjectSelect from "../ProjectSelect";
+import ProjectPosts from "./ProjectPosts";
+import ProjectSelect from "./ProjectSelect";
 
 export default function Projects() {
     return (
@@ -9,7 +9,7 @@ export default function Projects() {
         >
             <div className="container mx-auto  ">
                 <ProjectSelect />
-                <ProjectPostList />
+                <ProjectPosts />
             </div>
         </section>
     );

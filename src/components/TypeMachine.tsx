@@ -1,27 +1,28 @@
+"use client";
 import { useEffect, useState } from "react";
 
-type titleProps = {
-    title: string;
+type TypeMachineProps = {
+    input: string;
 };
 
-export default function Title({ title }: titleProps) {
-    const [currentTitle, setTitle] = useState("");
+export default function TypeMachine({ input }: TypeMachineProps) {
+    const [text, setText] = useState("");
     const [currentIndex, setCurrentindex] = useState(0);
 
     useEffect(() => {
-        if (currentIndex < title.length) {
+        if (currentIndex < input.length) {
             const timeout = setTimeout(() => {
-                setTitle((prevText) => prevText + title[currentIndex]);
+                setText((prevText) => prevText + input[currentIndex]);
                 setCurrentindex((prevIndex) => prevIndex + 1);
             }, 20);
 
             return () => clearTimeout(timeout);
         }
-    }, [currentIndex, title]);
+    }, [currentIndex, text]);
 
     return (
         <>
-            <p>{currentTitle}</p>
+            <p>{text}</p>
         </>
     );
 }

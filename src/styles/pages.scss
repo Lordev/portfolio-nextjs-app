@@ -1,11 +1,5 @@
 @import "../styles/variables.scss";
 
-.wrapper {
-    overflow: hidden;
-    background-color: var(--background);
-}
-
-
 .background-about {
     background-image: url(../../public/about-img.jpg);
     height: 100%;
