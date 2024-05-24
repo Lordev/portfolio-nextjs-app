@@ -23,7 +23,7 @@ export default function SocialIcon({
     return (
         <Icon
             size={size}
-            className={`transition-colors duration-200 cursor-pointer text-zinc-500 hover:animate-bouncy ${IconHoverColor} hover:scale-110`}
+            className={`transition-colors duration-200 cursor-pointer text-zinc-400 ${IconHoverColor} hover:scale-110`}
         />
     );
 }

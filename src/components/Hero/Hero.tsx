@@ -1,8 +1,9 @@
 "use client";
 import { useRef } from "react";
 import { useScroll, useTransform, motion, useSpring } from "framer";
-import Button from "./Button/Button";
+import Button from "../Button/Button";
 import TypeMachine from "@/components/TypeMachine";
+import HeroIconsBox from "./HeroIconsBox";
 
 export default function Hero() {
     const refContainer = useRef<HTMLDivElement>(null);
@@ -32,11 +33,12 @@ export default function Hero() {
     return (
         <motion.section
             id="Hero"
-            className="min-h-screen flex flex-col justify-center sticky top-0 z-20 bg-fixed container mx-auto "
+            className="min-h-screen flex max-lg:flex-col max-lg:justify-center items-center 
+             sticky top-0 z-20 bg-fixed max-w-screen-lg mx-auto md:gap-40 sm:gap-16 gap-8 animate-floatSlow max-lg:text-center"
             ref={refContainer}
             style={{ translateY: scrollTransformNegative }}
         >
-            <div className="max-w-[520px] space-y-8">
+            <div className="max-w-[600px] space-y-8">
                 <motion.h1 style={{ translateX: scrollTransformNegative }}>
                     Hi {`I'm`}{" "}
                     <span
@@ -46,21 +48,32 @@ export default function Hero() {
                         Lorenzo
                     </span>
                 </motion.h1>
+
                 <motion.div
-                    className="pr-8 text-pretty"
+                    className="pr-8 max-w-[600px]"
                     style={{ translateX: scrollTransformPositive }}
                 >
-                    <TypeMachine input="Resolving design problems, building smart user interfaces and useful interactions, developing rich web applications and seamless web experiences." />
+                    <TypeMachine input="Resolving design problems, building smart user interfaces and useful interactions." />
                 </motion.div>
-                <motion.div style={{ translateX: scrollTransformNegative }}>
+                <motion.div
+                    style={{ translateX: scrollTransformNegative }}
+                    className="flex items-center max-lg:justify-center gap-x-8"
+                >
                     <Button
                         label="Latest Projects"
                         primary={false}
-                        backgroundColor="var(--accent)"
+                        backgroundColor="var(--accent-secondary)"
                         textColor="var(--primary)"
                     />
                 </motion.div>
             </div>
+            <motion.div
+                style={{
+                    translateX: scrollTransformPositive,
+                }}
+            >
+                <HeroIconsBox />
+            </motion.div>
         </motion.section>
     );
 }

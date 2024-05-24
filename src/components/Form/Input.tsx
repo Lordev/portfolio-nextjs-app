@@ -1,8 +1,7 @@
-import { HtmlHTMLAttributes } from "react";
+import { InputHTMLAttributes } from "react";
 
-interface InputProps extends HtmlHTMLAttributes<HTMLInputElement> {
+interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, "id"> {
     id: string;
-    type?: string;
 }
 
 export default function Input({ id, type, ...rest }: InputProps) {

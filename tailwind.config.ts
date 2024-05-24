@@ -32,8 +32,8 @@ const config: Config = {
                 "radial-accent":
                     "linear-gradient(-45deg, var(--primary), var(--accent), var(--accent-secondary), var(--secondary))",
                 "about-section": "url('/public/jpg.jpeg')",
-                "hover-gradient":
-                    "radial-gradient(circle, var(--accent) 0%, rgba(0,0,0,0) 50%)",
+                "radial-gradient-accent":
+                    "radial-gradient(circle, var(--accent) 0%, rgba(0,0,0,0) 60%)",
             },
             colors: {
                 primary: "var(--primary)",
@@ -76,6 +76,26 @@ const config: Config = {
                         transform: "translateX(0)",
                     },
                 },
+                Spin: {
+                    "0%": {
+                        transform: "rotate(0deg)",
+                    },
+                    "100%": {
+                        transform: "rotate(360deg)",
+                    },
+                },
+                float: {
+                    "0%, 100%": { transform: "translateY(0) rotate(0)" },
+                    "25%": { transform: "translateY(-4px) rotate(2deg)" },
+                    "50%": { transform: "translateY(-2px) rotate(4deg)" },
+                    "75%": { transform: "translateY(-4px) rotate(2deg)" },
+                },
+                floatSlow: {
+                    "0%, 100%": { transform: "translateY(0) rotate(0)" },
+                    "25%": { transform: "translateY(-2px) rotate(.5deg)" },
+                    "50%": { transform: "translateY(-1px) rotate(-1deg)" },
+                    "75%": { transform: "translateY(-2px) rotate(.5deg)" },
+                },
             },
 
             backgroundSize: {
@@ -85,6 +105,9 @@ const config: Config = {
             animation: {
                 gradient: "gradient 15s ease infinite",
                 bouncy: "wobble 0.5s ease-in-out;",
+                spin: "Spin 120s linear infinite",
+                float: "float 4s ease-in-out infinite",
+                floatSlow: "floatSlow 10s ease-in-out infinite",
             },
         },
     },

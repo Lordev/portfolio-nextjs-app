@@ -1,0 +1,18 @@
+textarea::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+}
+
+textarea::-webkit-scrollbar-track {
+    background: transparent; 
+    border-radius: 10px; 
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: var(--accent); 
+    border-radius: 2px; 
+    border: 3px solid var(--accent); 
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}

@@ -1,15 +1,10 @@
-import SocialIcon from "@/components/SocialIcon";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa6";
 import LogoCompany from "../svg/Icon";
 import Link from "next/link";
 
 export default function HeaderContent() {
     const homeNav: { [key: string]: string } = {
         about: "About",
-        skills: "Skills",
         projects: "Projects",
-        contact: "Contact",
     };
 
     const navRender = () => {
@@ -31,11 +26,18 @@ export default function HeaderContent() {
 
     return (
         <>
-            <LogoCompany className="text-zinc-400 w-20 h-20 animate-spin" />
-            <div className="space-x-10 text-base ">{navRender()}</div>
-            <div className="flex space-x-3 justify-self-end">
-                <SocialIcon icon={FaGithub} size={30} />
-                <SocialIcon icon={FaLinkedin} size={30} />
+            <Link href="#hero" className="cursor-pointer">
+                <LogoCompany className="text-zinc-400 w-14 h-14 animate-spin" />
+            </Link>
+
+            <div className="space-x-10 text-base ">
+                {navRender()}
+                <Link
+                    className="font-bold font-inter text-md transition-transform duration-500 hover:text-accent uppercase justify-self-end border-2 border-zinc-400/40 rounded-full py-2 px-4 items-center justify-center"
+                    href={`#contact`}
+                >
+                    Contact
+                </Link>
             </div>
         </>
     );

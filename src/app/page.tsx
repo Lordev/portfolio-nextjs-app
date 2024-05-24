@@ -1,4 +1,4 @@
-import Hero from "@/components/Hero";
+import Hero from "@/components/Hero/Hero";
 import BgParticles from "@/components/BpParticles";
 import About from "@/components/About";
 import Projects from "@/components/Projects";

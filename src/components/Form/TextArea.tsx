@@ -1,6 +1,7 @@
-import { HtmlHTMLAttributes } from "react";
+import { TextareaHTMLAttributes } from "react";
+import "./textarea.css";
 
-interface TextAreaProps extends HtmlHTMLAttributes<HTMLTextAreaElement> {
+interface TextAreaProps extends Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, "id"> {
     id: string;
 }
 

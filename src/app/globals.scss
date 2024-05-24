@@ -15,17 +15,17 @@
     }
 
     body {
+
         @apply text-base text-primary;
     }
     
     p {
-        @apply text-base font-inter font-extralight; 
+        @apply sm:text-base text-sm font-inter font-extralight; 
 
     }
 
-    
     h1 {
-        @apply text-3xl  tracking-widest uppercase font-jetBrains font-medium; 
+        @apply lg:text-5xl sm:text-3xl text-lg tracking-widest uppercase font-jetBrains font-medium; 
     }
 
     h2 {
@@ -44,12 +44,24 @@
     h5 {
         @apply text-sm font-jetBrains font-normal uppercase;
     }
-
-    input {
-        @apply bg-transparent px-0 py-1 border-b-2 placeholder:text-base border-gray-50/5 active:border-none focus:outline-none focus:border-transparent font-[inter]
+    h6 {
+        @apply text-xs font-jetBrains font-normal uppercase;
+    
     }
 
-    textarea {
-        @apply bg-white/[5%] border-white placeholder:text-base
-    }
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+-webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+transition: background-color 5000s ease-in-out 0s !important;
+-webkit-text-fill-color: var(--primary) !important;
 }

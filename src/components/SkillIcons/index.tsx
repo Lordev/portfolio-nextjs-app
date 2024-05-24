@@ -32,7 +32,10 @@ export default function SkillIcons() {
 
     return (
         <div className="text-accent flex items-center" ref={ref}>
-            <ul className="grid grid-cols-5 gap-4" ref={scope}>
+            <ul
+                className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4"
+                ref={scope}
+            >
                 <SkillIcon icon={FaHtml5} title="HTML" />
                 <SkillIcon icon={FaReact} title="React" />
                 <SkillIcon icon={FaCss3} title="CSS" />
