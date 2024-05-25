@@ -14,7 +14,7 @@ export default function PostContainer({
 
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ["0 1", "1.3 1"],
+        offset: ["0 1", "1 1"],
         smooth: 0.8,
     });
 

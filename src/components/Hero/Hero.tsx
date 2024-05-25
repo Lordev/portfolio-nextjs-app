@@ -2,8 +2,9 @@
 import { useRef } from "react";
 import { useScroll, useTransform, motion, useSpring } from "framer";
 import Button from "../Button/Button";
-import TypeMachine from "@/components/TypeMachine";
-import HeroIconsBox from "./HeroIconsBox";
+import dynamic from "next/dynamic";
+
+const HeroIconsBox = dynamic(() => import("./HeroIconsBox"), { ssr: false });
 
 export default function Hero() {
     const refContainer = useRef<HTMLDivElement>(null);
@@ -53,7 +54,10 @@ export default function Hero() {
                     className="pr-8 max-w-[600px]"
                     style={{ translateX: scrollTransformPositive }}
                 >
-                    <TypeMachine input="Resolving design problems, building smart user interfaces and useful interactions." />
+                    <p>
+                        Resolving design problems, building smart user interfaces and
+                        useful interactions.
+                    </p>
                 </motion.div>
                 <motion.div
                     style={{ translateX: scrollTransformNegative }}

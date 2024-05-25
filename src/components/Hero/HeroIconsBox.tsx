@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa6";
-import { CiMail } from "react-icons/ci";
-import { FaTwitter } from "react-icons/fa";
+import Image from "next/image";
+import Github from "../svg/Github";
+import Twitter from "../svg/Twitter";
+import Mail from "../svg/Mail";
+import Linkedin from "../svg/Linkedin";
 
 export default function HeroIconsBox() {
     const [hoveredElement, setHoveredElement] = useState<string | null>(null);
@@ -28,16 +29,10 @@ export default function HeroIconsBox() {
                     onMouseEnter={() => handleHover(element)}
                     onMouseLeave={() => setHoveredElement(null)}
                 >
-                    {element === "FaGithub" && (
-                        <FaGithub className="sm:w-8 sm:h-8 w-6 h-6" />
-                    )}
-                    {element === "FaTwitter" && (
-                        <FaTwitter className="sm:w-8 sm:h-8 w-6 h-6" />
-                    )}
-                    {element === "CiMail" && <CiMail className="sm:w-8 sm:h-8 w-6 h-6" />}
-                    {element === "FaLinkedin" && (
-                        <FaLinkedin className="sm:w-8 sm:h-8 w-6 h-6" />
-                    )}
+                    {element === "FaGithub" && <Github width={30} height={30} />}
+                    {element === "FaTwitter" && <Twitter width={30} height={30} />}
+                    {element === "CiMail" && <Mail width={30} height={30} />}
+                    {element === "FaLinkedin" && <Linkedin width={30} height={30} />}
                 </div>
             ))}
         </div>

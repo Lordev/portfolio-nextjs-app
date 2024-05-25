@@ -3,7 +3,7 @@ import { PropsWithChildren, useEffect, useState } from "react";
 
 export default function HeaderContainer({ children }: PropsWithChildren) {
     const [scrolled, setScrolled] = useState(false);
-    const [backgroundColor, setBackgroundColor] = useState("primary");
+    const [backgroundColor, setBackgroundColor] = useState("secondary");
     const [borderColor, setBorderColor] = useState("");
 
     const backgroundClasses: Record<string, string> = {

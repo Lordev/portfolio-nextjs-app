@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import Header from "@/components/Header";
-import SideBar from "@/components/SideBar";
 import "./globals.scss";
 
 const inter = Inter({
@@ -35,7 +34,6 @@ export default function RootLayout({
                     `}
             >
                 <Header />
-                {/* <SideBar /> */}
                 {children}
             </body>
         </html>

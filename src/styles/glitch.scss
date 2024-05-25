@@ -36,7 +36,7 @@ for more information on how to random skew. */
         // Scoots text slightly to the left for the color offset.
         right: 2px;
         // Creates the color 'shadow' that happens on the glitch.
-        text-shadow: -1px 0 #ff00c1;
+        text-shadow: -1px 0 var(--accent-secondary);
         /* Creates an initial clip for our glitch. This works in
     a typical top,right,bottom,left fashion and creates a mask
     to only show a certain part of the glitch at a time. */
@@ -50,7 +50,7 @@ for more information on how to random skew. */
     &::after {
         @include glitchCopy;
         left: -2px;
-        text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+        text-shadow: -2px 0 var(--accent-secondary), 2px 2px #ff00c1;
         animation: glitch-anim2 1s infinite linear alternate-reverse;
     }
 }

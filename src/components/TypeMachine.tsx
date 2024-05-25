@@ -18,7 +18,7 @@ export default function TypeMachine({ input }: TypeMachineProps) {
 
             return () => clearTimeout(timeout);
         }
-    }, [currentIndex, text]);
+    }, [currentIndex, text, input]);
 
     return (
         <>

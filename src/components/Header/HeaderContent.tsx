@@ -27,7 +27,7 @@ export default function HeaderContent() {
     return (
         <>
             <Link href="#hero" className="cursor-pointer">
-                <LogoCompany className="text-zinc-400 w-14 h-14 animate-spin" />
+                <LogoCompany className="text-zinc-400 w-14 h-14 animate-spinSlow" />
             </Link>
 
             <div className="space-x-10 text-base ">

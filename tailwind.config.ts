@@ -31,7 +31,6 @@ const config: Config = {
             backgroundImage: {
                 "radial-accent":
                     "linear-gradient(-45deg, var(--primary), var(--accent), var(--accent-secondary), var(--secondary))",
-                "about-section": "url('/public/jpg.jpeg')",
                 "radial-gradient-accent":
                     "radial-gradient(circle, var(--accent) 0%, rgba(0,0,0,0) 60%)",
             },
@@ -47,6 +46,14 @@ const config: Config = {
             },
 
             keyframes: {
+                typewriter: {
+                    "0%,50%": {
+                        opacity: "0",
+                    },
+                    "100%": {
+                        opacity: "0.6",
+                    },
+                },
                 gradient: {
                     "0%": { backgroundPosition: "0% 50%" },
                     "50%": { backgroundPosition: "100% 50%" },
@@ -105,9 +112,11 @@ const config: Config = {
             animation: {
                 gradient: "gradient 15s ease infinite",
                 bouncy: "wobble 0.5s ease-in-out;",
-                spin: "Spin 120s linear infinite",
+                spinSlow: "Spin 120s linear infinite",
+                spinFast: "Spin 10s linear infinite",
                 float: "float 4s ease-in-out infinite",
                 floatSlow: "floatSlow 10s ease-in-out infinite",
+                typeWriter: "typewriter 1s steps(40) infinite",
             },
         },
     },
