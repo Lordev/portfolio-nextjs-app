@@ -1,6 +1,4 @@
-import SocialIcon from "@/components/SocialIcon";
 import Github from "./svg/Github";
-import { Link } from "framer";
 import LinkedIn from "./svg/Linkedin";
 
 export default function Footer() {

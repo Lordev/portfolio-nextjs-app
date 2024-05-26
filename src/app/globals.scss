@@ -29,7 +29,7 @@
     }
 
     h1 {
-        @apply lg:text-5xl sm:text-3xl text-lg tracking-widest uppercase font-jetBrains font-medium; 
+        @apply lg:text-5xl sm:text-3xl text-xl tracking-widest uppercase font-jetBrains font-medium; 
     }
 
     h2 {
@@ -52,8 +52,10 @@
         @apply text-xs font-jetBrains font-normal uppercase;
     
     }
-    
 
+    input:not(:placeholder-shown), textarea:not(:placeholder-shown) {
+        @apply border-accent
+    }
 }
 
 

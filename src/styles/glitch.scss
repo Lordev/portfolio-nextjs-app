@@ -7,7 +7,7 @@
     height: 100%;
 }
 
-.glitch-text:hover {
+.glitch-text {
     animation: glitch-skew 1s infinite linear alternate-reverse;
 }
 
@@ -25,7 +25,7 @@
     }
 }
 
-.glitch:hover {
+.glitch {
     /* Animation provies a slight random skew. Check bottom of doc
 for more information on how to random skew. */
 

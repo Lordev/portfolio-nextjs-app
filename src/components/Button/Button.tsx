@@ -1,5 +1,7 @@
+"use client";
 import "./button.css";
 import { ButtonHTMLAttributes, useState } from "react";
+import { cn } from "@/lib/utils";
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     /**
      * Is this the principal call to action on the page?
@@ -37,6 +39,7 @@ export default function Button({
     backgroundColor,
     label,
     textColor,
+    className,
     ...props
 }: ButtonProps) {
     const [hovered, setHovered] = useState(false);
@@ -54,7 +57,10 @@ export default function Button({
             onMouseEnter={handleHoverEnter}
             onMouseLeave={handleHoverLeave}
             type="button"
-            className={`w-fit button button--${size}`}
+            className={cn(
+                "w-fit transition-colors duration-150 ease-in sm:px-8 px-4 sm:py-5 py-4 text-md font-bold rounded-md",
+                className
+            )}
             {...props}
             style={{
                 backgroundColor: primary
@@ -70,7 +76,7 @@ export default function Button({
                         : textColor
                     : hovered
                     ? textColor
-                    : textColor,
+                    : backgroundColor,
                 border: `2px solid ${!primary && backgroundColor}`,
             }}
         >

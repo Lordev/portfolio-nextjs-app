@@ -32,14 +32,14 @@ export default function Hero() {
     );
 
     return (
-        <motion.section
+        <motion.div
             id="Hero"
-            className="min-h-screen flex max-lg:flex-col max-lg:justify-center items-center 
-             sticky top-0 z-20 bg-fixed max-w-screen-lg mx-auto md:gap-40 sm:gap-16 gap-8 animate-floatSlow max-lg:text-center"
+            className="min-h-screen grid md:grid-cols-[1fr_auto] items-center grid-rows-[1fr_auto]
+            relative top-0 z-20 bg-fixed max-w-screen-lg mx-auto animate-floatSlow max-md:text-center justify-center max-md:py-16"
             ref={refContainer}
             style={{ translateY: scrollTransformNegative }}
         >
-            <div className="max-w-[600px] space-y-8">
+            <div className="max-w-[600px] space-y-8 ">
                 <motion.h1 style={{ translateX: scrollTransformNegative }}>
                     Hi {`I'm`}{" "}
                     <span
@@ -51,7 +51,7 @@ export default function Hero() {
                 </motion.h1>
 
                 <motion.div
-                    className="pr-8 max-w-[600px]"
+                    className="md:pr-8 md:max-w-[600px] max-w-[350px] max-md:mx-auto"
                     style={{ translateX: scrollTransformPositive }}
                 >
                     <p>
@@ -61,7 +61,7 @@ export default function Hero() {
                 </motion.div>
                 <motion.div
                     style={{ translateX: scrollTransformNegative }}
-                    className="flex items-center max-lg:justify-center gap-x-8"
+                    className="flex items-center max-md:justify-center gap-x-8"
                 >
                     <Button
                         label="Latest Projects"
@@ -78,6 +78,6 @@ export default function Hero() {
             >
                 <HeroIconsBox />
             </motion.div>
-        </motion.section>
+        </motion.div>
     );
 }

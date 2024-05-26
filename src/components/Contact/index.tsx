@@ -3,7 +3,7 @@ import ContactTextBox from "./ContactTextBox";
 
 export default function Contact() {
     return (
-        <section
+        <div
             className="relative bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black/20 from-2% to-black/80 py-20"
             id="contact"
         >
@@ -11,6 +11,6 @@ export default function Contact() {
                 <ContactTextBox />
                 <ContactForm />
             </div>
-        </section>
+        </div>
     );
 }

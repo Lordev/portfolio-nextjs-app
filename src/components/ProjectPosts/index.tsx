@@ -3,7 +3,7 @@ import PostContent from "./PostContent";
 
 export default function ProjectPosts() {
     return (
-        <div className="grid lg:grid-cols-2 grid-cols-1 max-w-[600px] gap-8 mx-auto lg:max-w-[1200px] pt-20">
+        <div className="grid lg:grid-cols-2 grid-cols-1 max-lg:max-w-[600px] gap-16 mx-auto pt-20 px-2">
             <PostContainer fadeInDirection="left">
                 <PostContent />
             </PostContainer>

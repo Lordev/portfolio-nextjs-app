@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import Github from "../svg/Github";
 import Twitter from "../svg/Twitter";
 import Mail from "../svg/Mail";
@@ -15,7 +14,7 @@ export default function HeroIconsBox() {
     };
 
     return (
-        <div className="grid grid-cols-2 gap-4 border-2 border-accent-secondary rounded-full sm:p-12 p-8">
+        <div className="grid grid-cols-2 gap-4 border-2 border-accent-secondary rounded-full md:p-12 p-6 max-md:w-fit mx-auto justify-center items-center">
             {elements.map((element) => (
                 <div
                     key={element}
@@ -29,10 +28,16 @@ export default function HeroIconsBox() {
                     onMouseEnter={() => handleHover(element)}
                     onMouseLeave={() => setHoveredElement(null)}
                 >
-                    {element === "FaGithub" && <Github width={30} height={30} />}
-                    {element === "FaTwitter" && <Twitter width={30} height={30} />}
-                    {element === "CiMail" && <Mail width={30} height={30} />}
-                    {element === "FaLinkedin" && <Linkedin width={30} height={30} />}
+                    {element === "FaGithub" && (
+                        <Github className="w-6 h-6 sm:w-8 sm:h-8" />
+                    )}
+                    {element === "FaTwitter" && (
+                        <Twitter className="w-6 h-6 sm:w-8 sm:h-8" />
+                    )}
+                    {element === "CiMail" && <Mail className="w-6 h-6 sm:w-8 sm:h-8" />}
+                    {element === "FaLinkedin" && (
+                        <Linkedin className="w-6 h-6 sm:w-8 sm:h-8" />
+                    )}
                 </div>
             ))}
         </div>

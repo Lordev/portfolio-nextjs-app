@@ -37,9 +37,7 @@ export default function PostContent() {
                 </div>
                 <p className="px-8">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero illum
-                    consequatur dolorum adipisci minus tenetur dolor harum aperiam
-                    dignissimos porro dolores temporibus laudantium velit nam, doloremque
-                    nihil, necessitatibus voluptates quis!
+                    consequatur dolorum adipisci minus tenetur dolor harum aperiam.
                 </p>
                 <div className="px-8">
                     <ul className="flex flex-wrap gap-x-2 gap-y-2">

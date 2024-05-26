@@ -6,8 +6,8 @@ const SkillIcons = dynamic(() => import("./SkillIcons"), { ssr: false });
 
 export default function About() {
     return (
-        <section id="about" className="z-30 relative  border-accent">
-            <div className="relative grid bg-primary pt-20 pb-60 lg:pb-60 text-secondary border-t-4 lg:[clipPath:_polygon(0_0,100%_0%,100%_100%,0_80%)] [clipPath:_polygon(0_0,100%_0%,100%_100%,0_90%)] max-sm:px-16">
+        <div id="about" className="z-30 relative  border-accent">
+            <div className="relative grid bg-primary pt-20 pb-60 lg:pb-60 text-secondary border-t-4 lg:[clipPath:_polygon(0_0,100%_0%,100%_100%,0_80%)] [clipPath:_polygon(0_0,100%_0%,100%_100%,0_90%)] max-sm:px-4 ">
                 <div className="space-y-16 md:grid  gap-x-16 md:grid-cols-2 container mx-auto">
                     <div className="flex flex-col gap-5 max-w-md">
                         <SectionTitle title="About" />
@@ -81,6 +81,6 @@ export default function About() {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     );
 }

@@ -4,7 +4,7 @@ import SectionTitle from "@/components/SectionTitle";
 export default function ContactTextBox() {
     return (
         <HoverContainer>
-            <div className="flex flex-col gap-10  border-white/10 p-16 border-2 opacity-90 backdrop-blur-[1.2px]">
+            <div className="flex flex-col gap-10  border-white/10  max-sm:px-4 px-16 py-20 border-2 opacity-90 backdrop-blur-[1.2px]">
                 <div className="flex flex-row gap-8 ">
                     <div className="flex flex-col gap-5">
                         <SectionTitle title="Contact" />
