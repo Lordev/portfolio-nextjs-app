@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
-import Header from "@/components/Header";
+import Menu from "@/components/Menu";
 import "./globals.scss";
 import MenuProvider from "@/context/useMenuContext";
-import { InViewProvider } from "@/context/InViewContext";
 
 const inter = Inter({
     subsets: ["latin"],
@@ -28,20 +27,18 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <InViewProvider>
-                <MenuProvider>
-                    <body
-                        className={`
+            <MenuProvider>
+                <body
+                    className={`
                     ${inter.variable} 
                     ${JetBrains.variable} 
                     font-jetBrains
+                    overflow-x-hidden
                     `}
-                    >
-                        <Header />
-                        {children}
-                    </body>
-                </MenuProvider>
-            </InViewProvider>
+                >
+                    {children}
+                </body>
+            </MenuProvider>
         </html>
     );
 }

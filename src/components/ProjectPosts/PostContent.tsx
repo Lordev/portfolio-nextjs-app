@@ -3,7 +3,8 @@ import Link from "next/link";
 import { FaGithub, FaLink } from "react-icons/fa";
 import ProjectTag from "./ProjectTag";
 
-export default function PostContent() {
+export default function 
+PostContent() {
     return (
         <>
             <Link href="#">

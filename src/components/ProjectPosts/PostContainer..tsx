@@ -46,7 +46,7 @@ export default function PostContainer({
         >
             <motion.div
                 style={{}}
-                className={`grid grid-rows-[auto_1fr] border-[.5px] border-zinc-400 pb-8 transition-all duration-500 ease-in transform `}
+                className={`grid grid-rows-[auto_1fr] border-[.5px] border-zinc-400 pb-8 transition-all duration-500 ease-in transform rounded-xl overflow-hidden`}
             >
                 {children}
             </motion.div>

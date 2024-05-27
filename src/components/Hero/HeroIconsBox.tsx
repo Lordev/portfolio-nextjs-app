@@ -18,8 +18,10 @@ export default function HeroIconsBox() {
             {elements.map((element) => (
                 <div
                     key={element}
-                    className={`transition-all cursor-pointer duration-200 ease-in  ${
-                        hoveredElement === element ? "scale-150 text-accent" : ""
+                    className={`transition-transform cursor-pointer duration-100 ease-in  ${
+                        hoveredElement === element
+                            ? "hover:scale-150 text-accent active:scale-125"
+                            : ""
                     } ${
                         hoveredElement && hoveredElement !== element
                             ? "scale-75 text-zinc-400"
