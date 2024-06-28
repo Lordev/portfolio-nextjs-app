@@ -33,7 +33,7 @@ export default function RootLayout({
                     ${inter.variable} 
                     ${JetBrains.variable} 
                     font-jetBrains
-                    overflow-x-hidden
+                    
                     `}
                 >
                     {children}

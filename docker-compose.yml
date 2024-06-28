@@ -1,0 +1,25 @@
+services:
+  my-nextjs-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/usr/src/app
+      - /root/.npm:/root/.npm
+      - /usr/src/app/.next:/usr/src/app/.next
+    environment:
+      NODE_ENV: development
+
+  my-nextjs-app-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: test
+    volumes:
+      - .:/usr/src/app
+      - /root/.npm:/root/.npm
+    environment:
+      NODE_ENV: test

@@ -23,24 +23,20 @@ export default function MenuContainer({ activeLink, children }: MenuContainerPro
     const navAnimation = {
         open: {
             scale: 1,
-            opacity: 1,
-            x: "30%",
-            y: "-30%",
-            transition: { type: "spring", stiffness: 120, damping: 15 },
+            matrix3d: "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)",
+            transition: { type: "spring", stiffness: 500, damping: 20 },
         },
         closed: {
             scale: 0,
-            opacity: 0,
-            x: "100%",
-            y: "-100%",
-            transition: { duration: 0.2, ease: "easeIn" },
+            matrix3d: "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)",
+            transition: { type: "spring", stiffness: 500, damping: 20 },
         },
     };
 
     const ulAnimation = {
         open: {
             opacity: 1,
-            transition: { duration: 0.2, ease: "easeIn", delay: 0.3 },
+            transition: { duration: 0.3, ease: "easeIn" },
         },
         closed: {
             opacity: 0,
@@ -60,19 +56,19 @@ export default function MenuContainer({ activeLink, children }: MenuContainerPro
     return (
         <>
             <motion.div
-                className="fixed top-0 right-0 z-40 w-[500px] h-[500px]"
+                className="fixed top-0 right-0 z-40 w-[300px] sm:w-[400px] lg:w-[500px] aspect-square origin-top-right "
                 initial="closed"
                 animate={navControls}
                 variants={navAnimation}
             >
                 <nav
-                    className={`rounded-full w-full h-full transition-colors duration-200 ease-in shadow-xl ${handleChangeClasses(
+                    className={`w-full h-full transition-colors duration-200 ease-in shadow-xl rounded-bl-full flex justify-center items-center ${handleChangeClasses(
                         "bg-accent-secondary",
                         "bg-accent"
                     )}`}
                 >
                     <motion.ul
-                        className={`justify-center items-center gap-y-4 fixed top-40 left-20 flex flex-col w-[250px] h-[250px] z-50
+                        className={`bottom-border-r justify-center items-center gap-y-2 flex flex-col mb-20 ml-20 z-50
                     ${handleChangeClasses("text-secondary", "text-primary")}`}
                         initial="closed"
                         animate={ulControls}

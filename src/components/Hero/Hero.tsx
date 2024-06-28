@@ -34,7 +34,8 @@ export default function Hero() {
         <section id="home" className="min-h-screen">
             <motion.div
                 className="min-h-screen grid md:grid-cols-[1fr_auto] items-center grid-rows-[1fr_auto]
-            relative top-0 z-20 bg-fixed max-w-screen-lg mx-auto animate-floatSlow max-md:text-center justify-center max-md:py-16"
+            relative top-0 z-20 bg-fixed max-w-screen-lg mx-auto animate-floatSlow max-md:text-center justify-center max-md:py-16
+            sm:px-8 px-2"
                 ref={refContainer}
                 style={{ translateY: scrollTransformNegative }}
             >
@@ -99,7 +100,7 @@ export default function Hero() {
                 style={{
                     translateY: scrollTransformPositive,
                 }}
-                className=" absolute  left-8 top-8"
+                className=" absolute left-4 top-4  md:left-8 md:top-7"
             >
                 <LogoCompany className="text-zinc-400 w-16 h-16 animate-spinSlow" />
             </motion.div>

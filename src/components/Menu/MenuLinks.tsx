@@ -35,7 +35,7 @@ export default function MenuLinks({ setActiveID, activeLink }: MenuLinksProps) {
                     <Link
                         key={property.label}
                         href={`#${property.href}`}
-                        className={`font-bold font-inter text-normal transition-color duration-300 uppercase ${handleChangeClasses(
+                        className={`font-bold font-inter text-base sm:text-normal lg:text-lg transition-color duration-300 uppercase ${handleChangeClasses(
                             "hover:text-accent",
                             "hover:text-green-500"
                         )} ${

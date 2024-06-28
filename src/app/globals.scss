@@ -33,16 +33,16 @@
     }
 
     h2 {
-        @apply text-[1.2rem] font-medium font-jetBrains; 
+        @apply text-sm sm:text-base font-medium font-jetBrains; 
     }
 
     h3 {
-        @apply text-lg font-bold tracking-tighter uppercase;
+        @apply sm:text-lg text-normal  font-bold tracking-tighter uppercase;
     }        
 
 
     h4 {
-        @apply text-base uppercase tracking-widest font-bold;
+        @apply sm:text-base text-sm uppercase tracking-widest font-bold;
     }
 
     h5 {

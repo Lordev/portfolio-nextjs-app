@@ -15,7 +15,7 @@ const Projects = dynamic(() => import("@/components/Projects"), {
 
 export default function Home() {
     return (
-        <main>
+        <main className="overflow-hidden">
             <Menu />
             <AnimationLoad />
             <BgParticles />
