@@ -4,6 +4,7 @@ import { useScroll, useTransform, motion, useSpring } from 'framer';
 import Button from '../Button/Button';
 import HeroIconsBox from './HeroIconsBox';
 import LogoCompany from '../svg/Icon';
+import Image from 'next/image';
 
 export default function Hero() {
 	const refContainer = useRef<HTMLDivElement>(null);
@@ -31,11 +32,11 @@ export default function Hero() {
 	);
 
 	return (
-		<section id="home" className="min-h-screen">
+		<section id="home" className="min-h-screen relative">
 			<motion.div
 				className="min-h-screen grid md:grid-cols-[1fr_auto] items-center grid-rows-[1fr_auto]
-            relative top-0 z-20 bg-fixed max-w-screen-lg mx-auto animate-floatSlow max-md:text-center justify-center max-md:py-16
-            sm:px-8 px-2"
+            	top-0 z-20 bg-fixed max-w-screen-lg mx-auto animate-floatSlow max-md:text-center justify-center max-md:py-16
+            	sm:px-8 px-2 relative"
 				ref={refContainer}
 				style={{ translateY: scrollTransformNegative }}
 			>
@@ -107,6 +108,23 @@ export default function Hero() {
 				className=" absolute left-4 top-4  md:left-8 md:top-7"
 			>
 				<LogoCompany className="text-zinc-400 w-16 h-16 animate-spinSlow" />
+			</motion.div>
+			<motion.div
+				initial={{ opacity: 0, translateY: -20 }}
+				animate={{ opacity: 1, translateY: 0 }}
+				transition={{ type: 'spring', stiffness: 20 }}
+				style={{
+					translateY: scrollTransformPositive,
+				}}
+				className="absolute bottom-0 left-0 -translate-y-1/2 -translate-x-1/2"
+			>
+				<Image
+					src="/images/space-rocket-model.png"
+					alt="space rocket model"
+					width={2000}
+					height={2000}
+					className="w-[60rem] aspect-square z-10 rotate-45"
+				/>
 			</motion.div>
 		</section>
 	);

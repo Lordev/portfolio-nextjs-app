@@ -4,71 +4,71 @@ import { FaGithub, FaLink } from 'react-icons/fa';
 import ProjectTag from './ProjectTag';
 import { z } from 'zod';
 
-const projectSchema = z.object({
-	_id: z.string(),
-	title: z.string(),
-	description: z.string(),
-	links: z.array(z.string().url()),
-	developerLanguages: z.array(z.string()),
-	imageThumbnail: z.object({
-		url: z.string().url(),
-		description: z.string(),
-		height: z.number(),
-		width: z.number(),
-		title: z.string(),
-	}),
-});
+// const projectSchema = z.object({
+// 	_id: z.string(),
+// 	title: z.string(),
+// 	description: z.string(),
+// 	links: z.array(z.string().url()),
+// 	developerLanguages: z.array(z.string()),
+// 	imageThumbnail: z.object({
+// 		url: z.string().url(),
+// 		description: z.string(),
+// 		height: z.number(),
+// 		width: z.number(),
+// 		title: z.string(),
+// 	}),
+// });
 
-const projectsCollection = z.object({
-	items: z.array(projectSchema),
-});
+// const projectsCollection = z.object({
+// 	items: z.array(projectSchema),
+// });
 
-export async function fetchContent() {
-	const accessToken = 'x_OUztB_UKG02ylebGl1nP82dXldOk5YkR5D9ItWkVQ';
-	const graphqlEndpoint =
-		'https://graphql.contentful.com/content/v1/spaces/loekk0fdi741/environments/master';
+// export async function fetchContent() {
+// 	const accessToken = 'x_OUztB_UKG02ylebGl1nP82dXldOk5YkR5D9ItWkVQ';
+// 	const graphqlEndpoint =
+// 		'https://graphql.contentful.com/content/v1/spaces/loekk0fdi741/environments/master';
 
-	const response = await fetch(graphqlEndpoint, {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json',
-			Authorization: `Bearer ${accessToken}`,
-		},
-		body: JSON.stringify({
-			query: `
-        query {
-            projectsCollection {
-                items {
-                _id
-                title
-                description
-                links
-                developerLanguages
-                imageThumbnail {
-                    url
-                    description
-                    height
-                    width
-                    contentType 
-                    title
-                }
-                }
-            }
-            }
-      `,
-		}),
-	});
+// 	const response = await fetch(graphqlEndpoint, {
+// 		method: 'POST',
+// 		headers: {
+// 			'Content-Type': 'application/json',
+// 			Authorization: `Bearer ${accessToken}`,
+// 		},
+// 		body: JSON.stringify({
+// 			query: `
+//         query {
+//             projectsCollection {
+//                 items {
+//                 _id
+//                 title
+//                 description
+//                 links
+//                 developerLanguages
+//                 imageThumbnail {
+//                     url
+//                     description
+//                     height
+//                     width
+//                     contentType
+//                     title
+//                 }
+//                 }
+//             }
+//             }
+//       `,
+// 		}),
+// 	});
 
-	if (!response.ok) {
-		throw new Error(`HTTP error! Status: ${response.status}`);
-	}
+// 	if (!response.ok) {
+// 		throw new Error(`HTTP error! Status: ${response.status}`);
+// 	}
 
-	const { data } = await response.json();
+// 	const { data } = await response.json();
 
-	const parsedData = projectsCollection.parse(data.projectsCollection);
+// 	const parsedData = projectsCollection.parse(data.projectsCollection);
 
-	return parsedData;
-}
+// 	return parsedData;
+// }
 
 // const fetchContent = async () => {
 // 	const data = await fetch('api/get-post-data');
@@ -76,23 +76,12 @@ export async function fetchContent() {
 // };
 
 export default async function PostContent() {
-	const data = await fetchContent();
+	// const data = await fetchContent();
 
 	return (
 		<>
-			<Link
-				href="#"
-				className="max-w-[600px] max-h-[300px] overflow-hidden"
-			>
-				<Image
-					src={data.items[0].imageThumbnail.url}
-					width={600}
-					height={300}
-					alt="project"
-					className="object-cover"
-				/>
-			</Link>
-			<div className="space-y-8">
+		
+			{/* <div className="space-y-8">
 				<div className="flex justify-between bg-zinc-400/20 px-8 py-2">
 					<div>
 						<h4>Project name</h4>
@@ -127,7 +116,7 @@ export default async function PostContent() {
 						<ProjectTag label="Sanity.io" />
 					</ul>
 				</div>
-			</div>
+			</div> */}
 		</>
 	);
 }

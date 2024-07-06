@@ -6,9 +6,9 @@ const SkillIcons = dynamic(() => import('./SkillIcons'), { ssr: false });
 
 export default function About() {
 	return (
-		<div id="about" className="z-30 relative  border-accent">
-			<div className="relative grid bg-primary pt-20 pb-60 lg:pb-60 text-secondary border-t-4 lg:[clipPath:_polygon(0_0,100%_0%,100%_100%,0_80%)] [clipPath:_polygon(0_0,100%_0%,100%_100%,0_90%)] max-sm:px-4 ">
-				<div className="space-y-16 md:grid  gap-x-16 md:grid-cols-2 container mx-auto">
+		<div id="about" className="z-30 relative">
+			<div className="relative grid bg-primary pt-20 pb-40 lg:pb-60 px-6 text-secondary lg:[clipPath:_polygon(0_0,100%_0%,100%_100%,0_80%)] [clipPath:_polygon(0_0,100%_0%,100%_100%,0_90%)] ">
+				<div className="space-y-16 md:grid gap-x-16 md:grid-cols-2 container mx-auto">
 					<div className="flex flex-col gap-5 max-w-md">
 						<SectionTitle title="About" />
 						<div>
@@ -47,8 +47,8 @@ export default function About() {
 						/>
 						<h4>Intuitive</h4>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit.
+							Designs that prioritize ease of use and seamless
+							navigation.
 						</p>
 					</div>
 					<div className="flex-col flex items-center space-y-6 ">
@@ -61,8 +61,7 @@ export default function About() {
 						/>
 						<h4>Dynamic</h4>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit.
+							Engaging web apps that respond to user interactions.
 						</p>
 					</div>
 					<div className="flex-col flex items-center space-y-6 ">
@@ -75,8 +74,8 @@ export default function About() {
 						/>
 						<h4>Fast</h4>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit.
+							Optimized for quick load times and smooth
+							performance.
 						</p>
 					</div>
 					<div className="flex-col flex items-center space-y-6 ">
@@ -89,8 +88,7 @@ export default function About() {
 						/>
 						<h4>Responsive</h4>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit.
+							Perfectly tailored for all devices and screen sizes.
 						</p>
 					</div>
 				</div>
