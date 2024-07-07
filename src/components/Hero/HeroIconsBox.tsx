@@ -14,7 +14,7 @@ export default function HeroIconsBox() {
 	};
 
 	return (
-		<div className="grid grid-cols-2 gap-4 border-2 border-accent-secondary rounded-full md:p-12 p-6 max-md:w-fit mx-auto justify-center items-center">
+		<div className="gap-4 rounded-full md:p-12 p-6 mx-auto justify-center items-center w-48 flex flex-col">
 			{elements.map(element => (
 				<div
 					key={element}
