@@ -2,6 +2,7 @@ import PostContainer from './PostContainer.';
 import Image from 'next/image';
 import Link from 'next/link';
 import ProjectTag from './ProjectTag';
+import ButtonModalOpen from './ButtonModalOpen';
 
 export default function ProjectPosts() {
 	return (
@@ -28,12 +29,7 @@ export default function ProjectPosts() {
 					</div>
 					<p>
 						I created this modern website for Strategysphere
-						Advisors, a consulting office. It features a sleek
-						design with animated components and a consistent
-						professional theme. The design was crafted partially in
-						Figma and inspired by various other sites. The blog
-						section is integrated with Sanity.io for content
-						management.
+						Advisors, a consulting office.
 					</p>
 					<div className="flex gap-2 flex-wrap">
 						<ProjectTag label="Typescript" />
@@ -42,7 +38,7 @@ export default function ProjectPosts() {
 						<ProjectTag label="Sanity.io" />
 						<ProjectTag label="Figma" />
 					</div>
-					<Link href="" target="blank"></Link>
+					<ButtonModalOpen />
 				</div>
 			</div>
 			<div className="flex items-center">

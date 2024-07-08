@@ -14,7 +14,7 @@ export default function HeroIconsBox() {
 	};
 
 	return (
-		<div className="gap-4 rounded-full md:p-12 p-6 mx-auto justify-center items-center w-48 flex flex-col">
+		<div className="gap-4 rounded-full justify-center items-center flex text-zinc-400">
 			{elements.map(element => (
 				<div
 					key={element}
@@ -31,16 +31,16 @@ export default function HeroIconsBox() {
 					onMouseLeave={() => setHoveredElement(null)}
 				>
 					{element === 'FaGithub' && (
-						<Github className="w-6 h-6 sm:w-8 sm:h-8" />
+						<Github className="w-4 h-4 sm:w-6 sm:h-6" />
 					)}
 					{element === 'FaTwitter' && (
-						<Twitter className="w-6 h-6 sm:w-8 sm:h-8" />
+						<Twitter className="w-4 h-4 sm:w-6 sm:h-6" />
 					)}
 					{element === 'CiMail' && (
-						<Mail className="w-6 h-6 sm:w-8 sm:h-8" />
+						<Mail className="w-4 h-4 sm:w-6 sm:h-6" />
 					)}
 					{element === 'FaLinkedin' && (
-						<Linkedin className="w-6 h-6 sm:w-8 sm:h-8" />
+						<Linkedin className="w-4 h-4 sm:w-6 sm:h-6" />
 					)}
 				</div>
 			))}

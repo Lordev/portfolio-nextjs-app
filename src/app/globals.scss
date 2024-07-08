@@ -9,6 +9,7 @@
 	--secondary: #2f4858;
 	--accent: #ea580c;
 	--accent-secondary: #64baaa;
+	--muted: #7f7f7f;
 	--slide-with: 700px;
 }
 
@@ -42,7 +43,7 @@
 	}
 
 	h5 {
-		@apply text-normal font-jetBrains font-normal;
+		@apply text-base font-jetBrains font-normal uppercase;
 	}
 
 	h6 {

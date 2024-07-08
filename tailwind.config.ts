@@ -38,6 +38,7 @@ const config: Config = {
 				primary: 'var(--primary)',
 				secondary: 'var(--secondary)',
 				accent: 'var(--accent)',
+				muted: 'var(--muted)',
 				'accent-secondary': 'var(--accent-secondary)',
 			},
 			dropShadow: {
