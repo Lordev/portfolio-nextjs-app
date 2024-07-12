@@ -55,6 +55,27 @@ const config: Config = {
 						opacity: '0.6',
 					},
 				},
+				movingBlob: {
+					'0%': {
+						borderRadius: '30% 70% 33% 67% / 53% 51% 49% 47%',
+					},
+					'20%': {
+						borderRadius: '40% 60% 30% 70% / 50% 55% 45% 50%',
+					},
+					'40%': {
+						borderRadius: '35% 65% 45% 55% / 60% 50% 40% 50%',
+					},
+					'60%': {
+						borderRadius: '25% 75% 50% 50% / 45% 60% 55% 40%',
+					},
+					'80%': {
+						borderRadius: '20% 80% 40% 60% / 55% 45% 35% 65%',
+					},
+					'100%': {
+						borderRadius: '30% 70% 33% 67% / 53% 51% 49% 47%',
+					},
+				},
+
 				gradient: {
 					'0%': { backgroundPosition: '0% 50%' },
 					'50%': { backgroundPosition: '100% 50%' },
@@ -128,6 +149,7 @@ const config: Config = {
 				floatSlow: 'floatSlow 10s ease-in-out infinite',
 				typeWriter: 'typewriter 1s steps(40) infinite',
 				spinTilt: 'spinTilt 20s linear infinite',
+				movingBlob: 'movingBlob 10s linear infinite',
 			},
 		},
 	},

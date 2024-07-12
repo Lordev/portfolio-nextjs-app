@@ -5,87 +5,58 @@ import {
 	ModalBody,
 	ModalFooter,
 } from '@nextui-org/modal';
-import Image from 'next/image';
+import ProjectInfoSlider from './ProjectInfoSlider';
+import UrlIcon from '../svg/UrlIcon';
+import Github from '../svg/Github';
+import { ProjectModalData } from '@/lib/types/ProjectModalData';
 
 interface ProjectInfoModalProps {
-	handleOpenModal: () => void;
 	isOpen: boolean;
 	onClose: () => void;
+	projectData: ProjectModalData;
 }
 
 export default function ProjectInfoModal({
 	isOpen,
 	onClose,
+	projectData,
 }: ProjectInfoModalProps) {
-	const quantity = 4;
+	const { sliderImages, title, description, repositoryUrl, websiteUrl } =
+		projectData;
 
 	return (
 		<Modal
 			isOpen={isOpen}
 			onClose={onClose}
 			placement="center"
-			size="sm"
-			shadow="lg"
 			shouldBlockScroll={false}
-			backdrop="opaque"
+			backdrop="blur"
 			classNames={{
-				closeButton: 'right-4 top-4',
+				closeButton: 'right-2 top-2 z-30',
+				base: 'rounded-lg overflow-hidden ',
+				wrapper: 'bg-black bg-opacity-50',
 			}}
 		>
-			<ModalContent className="text-secondary bg-primary max-w-screen-xl ">
-				<div
-					className={`overflow-hidden flex w-[1600px * ${quantity}]`}
-				>
-					<Image
-						src={'/images/strategysphere-advisors-slide-01.png'}
-						width={1600}
-						height={900}
-						alt="Project Image"
-						className="object-cover"
-						data-index={0}
-					/>
-					<Image
-						src={'/images/strategysphere-advisors-slide-02.png'}
-						width={1600}
-						height={900}
-						alt="Project Image"
-						className="object-cover "
-						data-index={1}
-					/>
-					<Image
-						src={'/images/strategysphere-advisors-slide-03.png'}
-						width={1600}
-						height={900}
-						alt="Project Image"
-						className="object-cover "
-						data-index={2}
-					/>
-					<Image
-						src={'/images/strategysphere-advisors-slide-04.png'}
-						width={1600}
-						height={900}
-						alt="Project Image"
-						className="object-cover "
-						data-index={3}
-					/>
+			<ModalContent className="text-secondary bg-primary max-w-[700px] ">
+				<div className="mt-12">
+					<ProjectInfoSlider sliderImages={sliderImages} />
 				</div>
-				<div className="p-4">
-					<ModalHeader>Project Info</ModalHeader>
-					<ModalBody>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit. Sed quis neque eget est convallis tincidunt.
-							Ut auctor, justo quis varius viverra, mi arcu
-							ultricies libero, eget ullamcorper lorem libero et
-							enim. Nulla facilisi. Sed ultricies, nunc at
-							fermentum lacinia, nunc felis ultricies justo, nec
-							varius justo mi ac nunc. Integer nec ligula mauris.
-							Nulla facilisi. Sed ultricies, nunc at fermentum
-							lacinia, nunc felis ultricies justo, nec varius
-							justo mi ac nunc. Integer nec ligula mauris.
-						</p>
-					</ModalBody>
-				</div>
+				<ModalHeader>{title}</ModalHeader>
+				<ModalBody className="grid">
+					<p>{description}</p>
+				</ModalBody>
+				<ModalFooter>
+					<div className="grid grid-cols-2">
+						<div className="border-l-2 border-t-2 border-b-2 border-zinc-400 py-2 px-4 flex gap-4 justify-between ">
+							Repository
+							<Github width={20} height={20} />
+						</div>
+						<div className="border-2 border-zinc-400  py-2 px-4 flex gap-4 justify-between">
+							Website
+							<UrlIcon width={20} height={20} />
+						</div>
+					</div>
+				</ModalFooter>
 			</ModalContent>
 		</Modal>
 	);

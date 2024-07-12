@@ -4,11 +4,13 @@ import { PropsWithChildren, useRef } from 'react';
 
 interface ProjectPostProps extends PropsWithChildren {
 	fadeInDirection?: 'left' | 'right';
+	classNames?: string;
 }
 
 export default function PostContainer({
 	children,
 	fadeInDirection = 'right',
+	classNames,
 }: ProjectPostProps) {
 	const ref = useRef<HTMLDivElement>(null);
 
@@ -43,7 +45,7 @@ export default function PostContainer({
 						? transitionXLeft
 						: transitionXRight,
 			}}
-			className=""
+			className={classNames}
 			ref={ref}
 		>
 			<motion.div
