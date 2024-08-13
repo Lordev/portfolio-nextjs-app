@@ -9,6 +9,7 @@
 	--secondary: #2f4858;
 	--accent: #ea580c;
 	--accent-secondary: #64baaa;
+	--accent-tertiary: #eab308;
 	--muted: #7f7f7f;
 	--slide-with: 700px;
 }
@@ -27,7 +28,7 @@
 	}
 
 	h1 {
-		@apply lg:text-9xl sm:text-3xl text-xl tracking-widest uppercase font-jetBrains font-medium;
+		@apply lg:text-8xl sm:text-3xl text-xl tracking-wide uppercase font-jetBrains font-medium;
 	}
 
 	h2 {
@@ -43,7 +44,7 @@
 	}
 
 	h5 {
-		@apply text-base font-jetBrains font-normal uppercase;
+		@apply md:text-base text-xs font-jetBrains font-normal uppercase;
 	}
 
 	h6 {

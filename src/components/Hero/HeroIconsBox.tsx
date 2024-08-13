@@ -1,49 +1,49 @@
 import React, { useState } from 'react';
-import Github from '../svg/Github';
-import Twitter from '../svg/Twitter';
-import Mail from '../svg/Mail';
-import Linkedin from '../svg/Linkedin';
+import socialLinks from '@/lib/data/socialLinks';
+import Link from 'next/link';
+
+type SocialLinkKey = keyof typeof socialLinks;
+
+const links: SocialLinkKey[] = ['mail', 'linkedin', 'twitter', 'github'];
 
 export default function HeroIconsBox() {
-	const [hoveredElement, setHoveredElement] = useState<string | null>(null);
+	const [hoveredElement, setHoveredElement] = useState<
+		number | string | null
+	>(null);
 
-	const elements = ['FaGithub', 'FaTwitter', 'CiMail', 'FaLinkedin'];
-
-	const handleHover = (e: string) => {
+	const handleHover = (e: number | string) => {
 		setHoveredElement(e);
 	};
 
 	return (
 		<div className="gap-4 rounded-full justify-center items-center flex text-zinc-400">
-			{elements.map(element => (
-				<div
-					key={element}
-					className={`transition-all cursor-pointer duration-200 ease-in   ${
-						hoveredElement === element
-							? 'hover:scale-150 text-accent active:scale-125'
-							: ''
-					} ${
-						hoveredElement && hoveredElement !== element
-							? 'scale-75 text-zinc-400'
-							: ''
-					}`}
-					onMouseEnter={() => handleHover(element)}
-					onMouseLeave={() => setHoveredElement(null)}
-				>
-					{element === 'FaGithub' && (
-						<Github className="w-4 h-4 sm:w-6 sm:h-6" />
-					)}
-					{element === 'FaTwitter' && (
-						<Twitter className="w-4 h-4 sm:w-6 sm:h-6" />
-					)}
-					{element === 'CiMail' && (
-						<Mail className="w-4 h-4 sm:w-6 sm:h-6" />
-					)}
-					{element === 'FaLinkedin' && (
-						<Linkedin className="w-4 h-4 sm:w-6 sm:h-6" />
-					)}
-				</div>
-			))}
+			{links.map(link => {
+				const { icon: Icon, href } = socialLinks[link];
+				return (
+					<div
+						key={link}
+						className={`transition-all cursor-pointer duration-200 ease-in   ${
+							hoveredElement === link
+								? 'hover:scale-150 text-accent active:scale-125'
+								: ''
+						} ${
+							hoveredElement && hoveredElement !== link
+								? 'scale-75 text-zinc-400'
+								: ''
+						}`}
+						onMouseEnter={() => handleHover(link)}
+						onMouseLeave={() => setHoveredElement(null)}
+					>
+						<Link
+							href={href}
+							target="_blank"
+							rel={'noopener noreferrer'}
+						>
+							<Icon width={24} height={24} />
+						</Link>
+					</div>
+				);
+			})}
 		</div>
 	);
 }

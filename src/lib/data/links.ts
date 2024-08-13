@@ -4,6 +4,10 @@ export const links = [
 		label: 'Home',
 	},
 	{
+		href: 'experience',
+		label: 'Experience',
+	},
+	{
 		href: 'about',
 		label: 'About',
 	},

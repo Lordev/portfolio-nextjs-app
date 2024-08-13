@@ -4,7 +4,6 @@ import { useDisclosure } from '@nextui-org/modal';
 import { useState } from 'react';
 import { ProjectModalData } from '@/lib/types/ProjectModalData';
 import ButtonUnderlined from '../Button/ButtonUnderlined';
-import { on } from 'events';
 
 interface ModalProps {
 	projectData: ProjectModalData;

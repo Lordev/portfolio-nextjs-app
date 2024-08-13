@@ -16,7 +16,10 @@ export default function MenuContainer({
 	const ulControls = useAnimation();
 
 	const handleChangeClasses = (init: string, onChange: string) => {
-		if (activeLink && !['about', 'projects'].includes(activeLink)) {
+		if (
+			activeLink &&
+			!['experience', 'about', 'projects'].includes(activeLink)
+		) {
 			return init;
 		} else {
 			return onChange;

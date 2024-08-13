@@ -1,12 +1,15 @@
 'use client';
-import { useState } from 'react';
-import Image from 'next/image';
 import LeftChevronIcon from '../svg/LeftChevronIcon';
 import RightChevronIcon from '../svg/RightChevronIcon';
+import { useState } from 'react';
+import Image from 'next/image';
 
 interface ProjectInfoSliderProps {
 	sliderImages: string[];
 }
+
+const width = 1900;
+const height = 450;
 
 export default function ProjectInfoSlider({
 	sliderImages = [],
@@ -26,18 +29,20 @@ export default function ProjectInfoSlider({
 	return (
 		<div className="relative overflow-hidden">
 			<div
-				className={`w-[100% * ${quantity}] transition-transform duration-500 ease-in-out n`}
+				className={`w-[100% * ${quantity}] transition-transform duration-500 ease-in-out `}
 				style={{ transform: `translateX(-${index * 100}%)` }}
 			>
-				<div className={`flex `}>
+				<div
+					className={`flex max-w-[${width}] max-h-[${height}]
+					w-full h-full`}
+				>
 					{sliderImages.map((image, index) => (
 						<Image
-							key={index}
+							key={image}
 							src={image}
-							width={1600}
-							height={800}
-							alt="Project Image"
-							className="object-cover"
+							width={width}
+							height={height}
+							alt={`slider-image-${index}`}
 						/>
 					))}
 				</div>

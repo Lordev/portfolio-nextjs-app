@@ -21,7 +21,7 @@ const config: Config = {
 				'7xl': ['4.6rem', '5rem'],
 				'8xl': ['5rem', '5.4rem'],
 				'9xl': ['6.4rem', '7.7rem'],
-				'10xl': ['7.7rem', '8.7rem'],
+				'10xl': ['7rem', '7.8rem'],
 			},
 
 			fontFamily: {
@@ -107,10 +107,24 @@ const config: Config = {
 				},
 				Spin: {
 					'0%': {
-						transform: 'rotate(0deg)',
+						transform: 'rotate(0deg) scale(1) ',
+						opacity: '.1',
+					},
+					'25%': {
+						transform: 'rotate(90deg) scale(1.05)',
+						opacity: '.2',
+					},
+					'50%': {
+						transform: 'rotate(180deg) scale(1.15)',
+						opacity: '.3',
+					},
+					'75%': {
+						transform: 'rotate(270deg) scale(1.05)',
+						opacity: '.2',
 					},
 					'100%': {
-						transform: 'rotate(360deg)',
+						transform: 'rotate(360deg) scale(1)',
+						opacity: '0.1',
 					},
 				},
 				float: {
@@ -137,14 +151,14 @@ const config: Config = {
 
 			backgroundSize: {
 				'400%': '400% 400%',
-			},
+		},
 
 			animation: {
 				gradient: 'gradient 15s ease infinite',
 				bouncy: 'wobble 0.5s ease-in-out;',
 				spinSlow: 'Spin 120s linear infinite',
-				spinFast: 'Spin 5s linear infinite',
-				spinFastReverse: 'Spin 4s linear infinite reverse',
+				spinFast: 'Spin 1.5s linear infinite',
+				spinFastReverse: 'Spin 1.5s linear infinite reverse',
 				float: 'float 4s ease-in-out infinite',
 				floatSlow: 'floatSlow 10s ease-in-out infinite',
 				typeWriter: 'typewriter 1s steps(40) infinite',

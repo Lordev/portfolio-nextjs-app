@@ -1,13 +1,7 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
 const HtmlIcon = (props: SVGProps<SVGSVGElement>) => (
-	<svg
-		xmlns="http://www.w3.org/2000/svg"
-		width={500}
-		height={500}
-		viewBox="0 0 375 375"
-		{...props}
-	>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 375" {...props}>
 		<path
 			fill="currentColor"
 			d="M187.5 0C291.055 0 375 83.945 375 187.5S291.055 375 187.5 375 0 291.055 0 187.5 83.945 0 187.5 0"

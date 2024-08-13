@@ -1,21 +1,37 @@
-import Github from "./svg/Github";
-import LinkedIn from "./svg/Linkedin";
-import Link from "next/link";
+import Link from 'next/link';
+
+import socialLinks from '@/lib/data/socialLinks';
+
+type SocialLinkKey = keyof typeof socialLinks;
+
+const links: SocialLinkKey[] = ['github', 'linkedin'];
+
 export default function Footer() {
-    return (
-        <footer className="gap-12 py-20 text-center bg-black/80 z-20 opacity-75">
-            <ul className="flex flex-row justify-center gap-8 mb-8">
-                <Link href={"https://github.com/Lordev"} target="_blank">
-                    <Github width={30} height={30} className="hover:text-accent" />
-                </Link>
-                <Link
-                    href={"https://www.linkedin.com/in/lorenzo-sallons-383945176/"}
-                    target="_blank"
-                >
-                    <LinkedIn width={30} height={30} className="hover:text-accent" />
-                </Link>
-            </ul>
-            <span className="text-[.8rem]">Created by Lorenzo Sallons &copy;2024</span>
-        </footer>
-    );
+	return (
+		<footer className="gap-12 py-20 text-center bg-black/80 z-20 opacity-75">
+			<ul className="flex flex-row justify-center gap-4 mb-8">
+				{links.map(link => {
+					const { icon: Icon, href } = socialLinks[link];
+					return (
+						<li key={link}>
+							<Link
+								href={href}
+								target="_blank"
+								rel={'noopener noreferrer'}
+							>
+								<Icon
+									width={28}
+									height={28}
+									className="hover:text-accent transition-colors duration-100 ease-in-out"
+								/>
+							</Link>
+						</li>
+					);
+				})}
+			</ul>
+			<span className="text-[.8rem]">
+				Created by Lorenzo Sallons &copy;2024
+			</span>
+		</footer>
+	);
 }
