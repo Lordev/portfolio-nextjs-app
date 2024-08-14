@@ -22,17 +22,17 @@ export const projectPostData: ProjectPostsData[] = [
 		},
 		modalProps: {
 			sliderImages: [
-				'/images/strategysphere-advisors-slide-01.png',
-				'/images/strategysphere-advisors-slide-02.png',
-				'/images/strategysphere-advisors-slide-03.png',
-				'/images/strategysphere-advisors-slide-04.png',
+				'/images/strategysphere-advisors-slide-01.jpg',
+				'/images/strategysphere-advisors-slide-02.jpg',
+				'/images/strategysphere-advisors-slide-03.jpg',
+				'/images/strategysphere-advisors-slide-04.jpg',
 			],
 			title: 'Strategysphere Advisors',
 			description:
 				'I developed a modern, responsive website for Strategysphere Advisors, handling full-stack development with TypeScript, React, and Next.js. The design visuals was created using Figma. I integrated Sanity.io as a headless CMS for the blog section, enabling easy updates and scalability',
 			repositoryUrl:
 				'https://github.com/Lordev/strategysphere-advisors-website/tree/main/workspace/MyWorkspace.code-workspace/Projects/company-template',
-			websiteUrl: 'https://strategysphere-advisors-website.vercel.app/',
+			websiteUrl: 'https://strategysphere-advisors.vercel.app/',
 		},
 	},
 	{
