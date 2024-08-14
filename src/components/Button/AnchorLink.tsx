@@ -1,8 +1,8 @@
 'use client';
-import { AnchorHTMLAttributes, useState } from 'react';
+import { AnchorHTMLAttributes, PropsWithChildren, useState } from 'react';
 import { cn } from '@/lib/utils';
 import Link, { LinkProps } from 'next/link';
-interface AnchorLinkProps extends LinkProps {
+interface AnchorLinkProps extends React.PropsWithChildren<LinkProps> {
 	/**
 	 * Is this the principal call to action on the page?
 	 */
@@ -11,20 +11,19 @@ interface AnchorLinkProps extends LinkProps {
 	 * What background color to use
 	 */
 	backgroundColor?: string;
-	/**
-	 * How large should the button be?
-	 */
-	size?: 'small' | 'medium' | 'large';
+
 	/**
 	 * Button contents
 	 */
-	label: string;
+	label?: string;
 	/**
 	 * Text color
 	 */
 	textColor?: string;
 
 	className?: string;
+
+	target?: string;
 }
 
 /**
@@ -32,11 +31,12 @@ interface AnchorLinkProps extends LinkProps {
  */
 export default function AnchorLink({
 	primary = true,
-	size = 'medium',
 	backgroundColor,
+	children,
 	label,
 	textColor,
 	className,
+	target = '',
 	...props
 }: AnchorLinkProps) {
 	const [hovered, setHovered] = useState(false);
@@ -58,6 +58,7 @@ export default function AnchorLink({
 				'w-fit transition-colors duration-150 ease-in sm:px-8 px-4 sm:py-5 py-4 text-xs sm:text-base font-bold rounded-md',
 				className
 			)}
+			target={target}
 			{...props}
 			style={{
 				backgroundColor: primary
@@ -77,7 +78,7 @@ export default function AnchorLink({
 				border: `2px solid ${!primary && backgroundColor}`,
 			}}
 		>
-			{label}
+			{label || children}
 		</Link>
 	);
 }

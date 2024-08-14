@@ -8,6 +8,15 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			screens: {
+				xs: '320px',
+				sm: '640px',
+				md: '768px',
+				lg: '1024px',
+				xl: '1280px',
+				'2xl': '1536px',
+			},
+
 			fontSize: {
 				small: ['1.2rem', '1.4rem'],
 				normal: ['1.4rem', '1.6rem'],
@@ -151,7 +160,7 @@ const config: Config = {
 
 			backgroundSize: {
 				'400%': '400% 400%',
-		},
+			},
 
 			animation: {
 				gradient: 'gradient 15s ease infinite',
