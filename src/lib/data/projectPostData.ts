@@ -16,7 +16,7 @@ export const projectPostData: ProjectPostsData[] = [
 			'Figma',
 		],
 		imageData: {
-			imageURL: '/images/strategysphere-frame.png',
+			imageURL: '/images/frame-strategysphere.png',
 			width: 750,
 			height: 425,
 		},
@@ -50,7 +50,7 @@ export const projectPostData: ProjectPostsData[] = [
 			'Figma',
 		],
 		imageData: {
-			imageURL: '/images/radiant-festival-frame.png',
+			imageURL: '/images/frame-radiant-festival.png',
 			width: 750,
 			height: 425,
 		},
@@ -85,7 +85,7 @@ export const projectPostData: ProjectPostsData[] = [
 			'Figma',
 		],
 		imageData: {
-			imageURL: '/images/sp-01-headset-frame.png',
+			imageURL: '/images/frame-sp-01.png',
 			width: 750,
 			height: 425,
 		},
@@ -110,7 +110,7 @@ export const projectPostData: ProjectPostsData[] = [
 			'I designed this elegant makeup artist website with a modern look and feel.',
 		projectTags: ['HTML', 'SCSS', 'Javascript', 'Gulp', 'Parcel', 'Figma'],
 		imageData: {
-			imageURL: '/images/chers-beauty-sallons-frame.png',
+			imageURL: '/images/frame-chers-beauty-sallons.png',
 			width: 750,
 			height: 425,
 		},

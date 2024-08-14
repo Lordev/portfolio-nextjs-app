@@ -12,7 +12,6 @@
 	"dependencies": {
 		"@formspree/react": "^2.5.1",
 		"@nextui-org/modal": "^2.0.36",
-		"@splinetool/react-spline": "^4.0.0",
 		"@tsparticles/engine": "^3.4.0",
 		"@tsparticles/react": "^3.0.0",
 		"@tsparticles/slim": "^3.4.0",
@@ -23,15 +22,13 @@
 		"next": "^14.2.4",
 		"react": "^18",
 		"react-dom": "^18",
-		"react-icons": "^5.2.1",
 		"react-responsive": "^10.0.0",
 		"react-scroll": "^1.9.0",
 		"react-scrollspy-navigation": "^2.0.6",
 		"react-spinners": "^0.14.1",
 		"react-use": "^17.5.0",
 		"sass": "^1.71.1",
-		"tailwind-merge": "^2.3.0",
-		"zod": "^3.23.8"
+		"tailwind-merge": "^2.3.0"
 	},
 	"devDependencies": {
 		"@next/bundle-analyzer": "^14.2.3",
