@@ -1,6 +1,6 @@
 'use client';
 import { useRef } from 'react';
-import { useScroll, useTransform, motion, useSpring } from 'framer';
+import { useScroll, useTransform, motion, useSpring } from 'framer-motion';
 import HeroIconsBox from './HeroIconsBox';
 import Image from 'next/image';
 import RotatingSlider from './RotatingSlider';
@@ -23,41 +23,85 @@ export default function Hero() {
 		}
 	);
 
+	// Fade-in and slide-up effect for initial load
+	const fadeInSlideUp = {
+		initial: { opacity: 0, y: 50 },
+		animate: { opacity: 1, y: 0 },
+		transition: { duration: 1, ease: 'easeOut' },
+	};
+
+	// Splitting text into individual letters for animation
+	const text = "Hello, I'm";
+	const name = 'Lorenzo';
+	const letters = text.split('').map((char, index) => (
+		<motion.span
+			key={index}
+			initial={{ opacity: 0, y: 20 }}
+			animate={{ opacity: 1, y: 0 }}
+			transition={{
+				delay: 0.1 * index,
+				duration: 0.6,
+				ease: 'easeOut',
+			}}
+		>
+			{char}
+		</motion.span>
+	));
+
+	const nameLetters = name.split('').map((char, index) => (
+		<motion.span
+			key={index}
+			initial={{ opacity: 0, y: 20 }}
+			animate={{ opacity: 1, y: 0 }}
+			transition={{
+				delay: 0.1 * (index + text.length),
+				duration: 0.6,
+				ease: 'easeOut',
+			}}
+			className="text-accent"
+		>
+			{char}
+		</motion.span>
+	));
+
 	return (
 		<section
 			id="home"
-			className="min-h-[700px] sm:min-h-[800px] md:min-h-[900px] lg:min-h-[950px] h-screen relative"
+			className="min-h-[700px] sm:min-h-[800px] md:min-h-[900px] lg:min-h-[950px] h-screen relative px-2"
+			ref={refContainer}
 		>
-			<div className="min-h-screen z-20 max-w-screen-sm mx-auto justify-center  flex flex-col  ">
+			<div className="min-h-screen z-0 max-w-screen-sm mx-auto justify-center flex flex-col ">
 				<motion.div
 					style={{
 						y: scrollTransformPositive,
 					}}
-					className="max-w-screen-2xl flex flex-col items-center gap-40 text-center z-30 mb-20"
+					className="max-w-screen-2xl flex flex-col items-center gap-40 text-center  mb-20"
 				>
-					<div className="relative lg:w-[400px] md:w-[350px] sm:w-[300px] w-[250px]">
+					<motion.div
+						className="relative lg:w-[400px] md:w-[350px] sm:w-[300px] w-[250px]"
+						initial={fadeInSlideUp.initial}
+						animate={fadeInSlideUp.animate}
+						transition={fadeInSlideUp.transition}
+					>
 						<RotatingSlider />
 						<Image
 							src="/images/developer-3d-model.png"
 							alt="Hero image"
 							width={400}
 							height={400}
-							className="absolute top-20 left-1/2 -translate-x-1/2 z-10 "
+							className="absolute top-20 left-1/2 -translate-x-1/2 z-10"
 						/>
-					</div>
-					<div className="flex flex-col gap-8 items-center max-sm:-mt-5 sm:pt-4 md:pt-16 lg:pt-24 ">
-						<h1
-							data-content="Hello, I'm"
-							className="relative after:absolute after:inset-0 after:content-[attr(data-content)] after:text-transparent after:lg:text-8xl after:sm:text-3xl after:text-xl  after:tracking-wide after:uppercase after:font-medium after:z-30
-            after:[-webkit-text-stroke:2px_var(--primary)]"
-						>
-							Hello, I{"'"}m <br />
-							<span
-								data-content-2="Lorenzo"
-								className="text-accent"
-							>
-								Lorenzo
-							</span>
+					</motion.div>
+					<motion.div
+						className="flex flex-col gap-8 items-center max-sm:-mt-5 sm:pt-4 md:pt-16 lg:pt-24"
+						initial={fadeInSlideUp.initial}
+						animate={fadeInSlideUp.animate}
+						transition={fadeInSlideUp.transition}
+					>
+						<h1 className="relative lg:text-8xl sm:text-3xl text-xl tracking-wide uppercase font-medium z-10">
+							{letters}
+							<br />
+							{nameLetters}
 						</h1>
 						<div className="flex items-center justify-center">
 							<div className="h-[.5px] w-8 bg-zinc-400 flex items-center mr-8" />
@@ -75,7 +119,7 @@ export default function Hero() {
 							textColor="var(--accent)"
 							href="#projects"
 						/>
-					</div>
+					</motion.div>
 				</motion.div>
 			</div>
 		</section>

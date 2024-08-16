@@ -1,12 +1,14 @@
 'use client';
 import { useMousePositionContext } from '@/hooks/useMousePositionContext';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, PropsWithChildren } from 'react';
 
-interface HoverContainerProps {
+interface CursorEffectWrapperProps extends PropsWithChildren {
 	children: React.ReactNode;
 }
 
-export default function HoverContainer({ children }: HoverContainerProps) {
+export default function CursorEffectWrapper({
+	children,
+}: CursorEffectWrapperProps) {
 	const { containerRef, elX, elY } = useMousePositionContext();
 	const [isHoverSupported, setIsHoverSupported] = useState(true);
 

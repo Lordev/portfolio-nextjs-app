@@ -5,7 +5,7 @@ import BlobCircle from './BlobCircle';
 export default function About() {
 	return (
 		<section id="about" className="py-20 pt-20 bg-zinc-300 relative">
-			<div className="max-w-screen-xl mx-auto  max-sm:w-full space-y-20 text-secondary relative">
+			<div className="max-w-screen-xl mx-auto  max-sm:w-full space-y-20 text-secondary relative z-30 px-2">
 				<Image
 					src={'/images/desktop-smartphone-app-development.png'}
 					alt="About me"

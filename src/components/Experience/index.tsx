@@ -4,7 +4,7 @@ import ExperienceBox from './ExperienceBox';
 
 export default function Experience() {
 	return (
-		<section id="experience" className="z-40 relative">
+		<section id="experience" className="z-30 relative">
 			<div className="relative grid bg-zinc-300 px-6 text-secondary gap-16 pt-20">
 				<div className="md:grid gap-x-16s  mx-auto max-w-screen-xl ">
 					<SectionTitle

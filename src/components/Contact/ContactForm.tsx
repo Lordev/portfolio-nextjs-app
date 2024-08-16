@@ -1,7 +1,6 @@
 'use client';
-
 import FormField from '@/components/Form/FormField';
-import HoverContainer from '../HoverContainer';
+import CursorEffectWrapper from '../CursorEffectWrapper';
 import ButtonForm from '../Button/ButtonForm';
 import SuccessModal from '../Form/SuccesModal';
 import { useForm, ValidationError } from '@formspree/react';
@@ -22,7 +21,7 @@ export default function Form() {
 
 	return (
 		<>
-			<HoverContainer>
+			<CursorEffectWrapper>
 				<div className="flex flex-col gap-2 text-center max-sm:px-4 px-16 py-20 col border border-white/10 rounded-md backdrop-blur-[2px]">
 					<form ref={formRef} onSubmit={handleSubmit}>
 						<fieldset className="flex flex-col space-y-10 text-[1.3rem]">
@@ -98,7 +97,7 @@ export default function Form() {
 						</fieldset>
 					</form>
 				</div>
-			</HoverContainer>
+			</CursorEffectWrapper>
 			<SuccessModal isOpen={isOpen} onClose={onClose} />
 		</>
 	);
