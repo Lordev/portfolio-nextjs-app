@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 type SocialLinkKey = keyof typeof socialLinks;
 
-const links: SocialLinkKey[] = ['mail', 'linkedin', 'twitter', 'github'];
+const links: SocialLinkKey[] = ['github', 'mail', 'linkedin'];
 
 export default function HeroIconsBox() {
 	const [hoveredElement, setHoveredElement] = useState<
