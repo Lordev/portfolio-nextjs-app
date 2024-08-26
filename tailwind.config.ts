@@ -175,6 +175,9 @@ const config: Config = {
 				movingBlob: 'movingBlob 10s linear infinite',
 			},
 		},
+		supports: {
+			hover: '(hover: hover)',
+		},
 	},
 	plugins: [require('@xpd/tailwind-3dtransforms')],
 };

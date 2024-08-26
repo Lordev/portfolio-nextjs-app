@@ -14,16 +14,26 @@ export default function CursorEffectWrapper({
 
 	useEffect(() => {
 		const hoverMediaQuery = window.matchMedia('(hover: hover)');
-		setIsHoverSupported(hoverMediaQuery.matches);
+		const isTouchDevice =
+			'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+		setIsHoverSupported(
+			!window.matchMedia('(hover: none)').matches ||
+				window.matchMedia('(pointer: coarse)').matches
+		);
 
 		const handleMediaChange = (e: MediaQueryListEvent) => {
-			setIsHoverSupported(e.matches);
+			setIsHoverSupported(e.matches && !isTouchDevice);
 		};
 
+		const handleTouchStart = () => setIsHoverSupported(false);
+
 		hoverMediaQuery.addEventListener('change', handleMediaChange);
+		window.addEventListener('touchstart', handleTouchStart);
 
 		return () => {
 			hoverMediaQuery.removeEventListener('change', handleMediaChange);
+			window.removeEventListener('touchstart', handleTouchStart);
 		};
 	}, []);
 
