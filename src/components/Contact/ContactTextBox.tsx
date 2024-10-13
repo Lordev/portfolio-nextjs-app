@@ -15,9 +15,8 @@ export default function ContactTextBox() {
 						<p>
 							Looking to connect or discuss a project? Reach out
 							using the form below, and I{"'"}ll respond promptly.
-							Whether you need a sleek website or a web
-							application, I{"'"}m here to help bring your vision
-							to life.
+							Whether it{"'"}s for collaboration or inquiries, I
+							{"'"}m happy to chat and explore possibilities.
 						</p>
 					</div>
 				</div>
